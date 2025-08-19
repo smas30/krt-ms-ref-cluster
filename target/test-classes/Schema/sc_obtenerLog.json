@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "required": ["success", "data", "timestamp"],
+  "properties": {
+    "success": { "type": "boolean" },
+    "timestamp": { "type": "number" },
+    "data": {
+      "type": "object",
+      "required": ["data", "total", "page", "limit", "hasNext", "hasPrev", "next", "prev", "pages", "last", "first"],
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "id", "correlationId", "serviceName", "serviceRequest", "serviceResponse",
+              "statusResponse", "duration", "createdBy", "updatedBy", "createdAt", "updatedAt"
+            ],
+            "properties": {
+              "id": { "type": "number" },
+              "correlationId": { "type": "string" },
+              "serviceName": { "type": "string" },
+              "serviceRequest": { "type": "string" },
+              "serviceResponse": { "type": "string" },
+              "statusResponse": { "type": "number" },
+              "duration": { "type": "number" },
+              "createdBy": { "type": "string" },
+              "updatedBy": { "type": "string" },
+              "createdAt": { "type": "string"},
+              "updatedAt": { "type": "string" }
+            }
+          }
+        },
+        "total": { "type": "number" },
+        "page": { "type": "number" },
+        "limit": { "type": "number" },
+        "hasNext": { "type": "boolean" },
+        "hasPrev": { "type": "boolean" },
+        "next": { "type": "number" },
+        "prev": { "type": "number" },
+        "pages": { "type": "number" },
+        "last": { "type": "number" },
+        "first": { "type": "number" }
+      }
+    }
+  }
+}
