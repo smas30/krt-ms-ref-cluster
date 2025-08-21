@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports (no 1.0) - Tag: @obtenerLogEstaciones</title>
+<title>Cucumber Reports (no 1.0) - Tag: @refClustersConFiltro</title>
 
 </head>
 <body>
@@ -74,9 +74,9 @@ $(document).ready(function() {
   </thead>
   <tbody>
     <tr class="info">
-      <td>krt-ms-log-estaciones</td>
+      <td>krt-ms-ref-cluster</td>
         <td>1.0</td>
-      <td>19 ago. 2025, 13:19</td>
+      <td>19 ago. 2025, 19:28</td>
     </tr>
   </tbody>
 </table>
@@ -128,20 +128,20 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">@obtenerLogEstaciones</td>
+          <td class="tagname">@refClustersConFiltro</td>
           <td      class="passed"    >11</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >7</td>
           <td >0</td>
           <td >0</td>
-          <td >0</td>
-          <td >0</td>
-          <td class="total">11</td>
+          <td class="total">19</td>
 
-          <td  class="passed"    >1</td>
           <td >0</td>
+          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="186145900">0.186</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="2787993300">2.787</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -173,25 +173,25 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_1353294921.html">api/obtenerLog.feature</a>
+      <a href="report-feature_1993266736.html">api/obtenerRefCluster.feature</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_4134408154.html">@obtenerLogEstaciones</a>
-       <a href="report-tag_428755052.html">@obtenerLog</a>
+       <a href="report-tag_1485807773.html">@obtenerRefCluster</a>
+       <a href="report-tag_1220584285.html">@refClustersConFiltro</a>
 </div>
 
 
-  <span class="lead-duration duration">0.186</span>
+  <span class="lead-duration duration">2.787</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Obtener logs de estaciones con par&aacute;metros v&aacute;lidos</span>
+  <span class="name">Consultar Ref Clusters con par&aacute;metros v&aacute;lidos</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -200,16 +200,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -219,7 +219,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details ">
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -252,90 +252,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">param correlationId = '1445|E11011|234234'</span>
+  <span class="name">param limit = 1000</span>
 
-  <span class="lead-duration duration">0.001</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">param createdStartDate = '2025-08-01T08:00:00'</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">param createdEndDate = '2025-08-19T13:00:00'</span>
-
-  <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">param limit = 10</span>
-
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 
@@ -385,11 +304,146 @@ $(document).ready(function() {
       <div class="step">
 
 
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">param name = 'string'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">param label = 'string'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">param refClusterStatus = 0</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">param regionId = 0</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">param idCluster = 1</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
 <div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
   <span class="name">method GET</span>
 
-  <span class="lead-duration duration">0.177</span>
+  <span class="lead-duration duration">2.781</span>
 
 </div>
 
@@ -407,23 +461,23 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>13:19:10.721 request:
-1 &gt; GET http://10.161.169.27:8517/api/v1/estaciones/log-estaciones?correlationId=1445%7CE11011%7C234234&amp;createdStartDate=2025-08-01T08%3A00%3A00&amp;createdEndDate=2025-08-19T13%3A00%3A00&amp;limit=10&amp;page=1
+        <pre>19:28:28.198 request:
+1 &gt; GET http://10.161.169.27:8517/api/v1/estaciones/ref-clusters?limit=1000&amp;page=1&amp;name=string&amp;label=string&amp;refClusterStatus=0&amp;regionId=0&amp;idCluster=1
 1 &gt; Content-Type: application/json
 1 &gt; X-USER-ID: E11011
 1 &gt; X-CORRELATION-ID: 1445|E11011|234234
-1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjkwNzFFMDU0QzZEMEUyQzExRTI3NUIzQjlFM0JEMjRFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjIzOTUwLCJleHAiOjE3NTU2Mjc1NTB9.9PIHV9ZReFKICuSptK7VlZca6mvaYwZRKLqyDR8qlFu9-yL0_p7likwFYvgCo_k2
+1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkNGQzc5OTIwOTUxQTY2MkE5NUNBRDA4MTNGM0U1MDI1Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ2MTA3LCJleHAiOjE3NTU2NDk3MDd9.cNpNA9F0RV5B38bAM4IKH-lkyJ_O9zAnrkRxbfcJZgV4WqxKlTTKS5nasP2rC_Cm
 1 &gt; Host: 10.161.169.27:8517
 1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-13:19:10.896 response time in milliseconds: 175
+19:28:30.972 response time in milliseconds: 2774
 1 &lt; 200
-1 &lt; content-length: 170
+1 &lt; content-length: 172
 1 &lt; Content-Type: application/json;charset=UTF-8
-{&quot;success&quot;:true,&quot;data&quot;:{&quot;data&quot;:[],&quot;total&quot;:0,&quot;page&quot;:1,&quot;limit&quot;:10,&quot;hasNext&quot;:false,&quot;hasPrev&quot;:false,&quot;next&quot;:1,&quot;prev&quot;:1,&quot;pages&quot;:0,&quot;last&quot;:0,&quot;first&quot;:1},&quot;timestamp&quot;:1755623950877}
+{&quot;success&quot;:true,&quot;data&quot;:{&quot;data&quot;:[],&quot;total&quot;:0,&quot;page&quot;:1,&quot;limit&quot;:1000,&quot;hasNext&quot;:false,&quot;hasPrev&quot;:false,&quot;next&quot;:1,&quot;prev&quot;:1,&quot;pages&quot;:0,&quot;last&quot;:0,&quot;first&quot;:1},&quot;timestamp&quot;:1755646110939}
 
 </pre>
       </div>
@@ -494,11 +548,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And failed">
   <span class="keyword indention">And</span>
-  <span class="name">print 'Total de logs encontrados:', response.data.data.length</span>
+  <span class="name">match response.data.data[0].name == 'string'</span>
 
-  <span class="lead-duration duration">0.004</span>
+  <span class="lead-duration duration">0.002</span>
 
 </div>
 
@@ -507,16 +561,39 @@ $(document).ready(function() {
 
 
 
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
+          <a>match</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details  in ">
+        <pre>match failed: EQUALS
+  $ | actual path does not exist (STRING:STRING)
+  '#notpresent'
+  'string'
+
+classpath:api/obtenerRefCluster.feature:33</pre>
+      </div>
+    </div>
+  </div>
+
 
 
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
           <a>Doc string</a>
       </div>
-      <div id="msg-4" class="collapse collapsable-details">
-        <pre>13:19:10.902 [print] Total de logs encontrados: 0 
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>19:28:30.980 classpath:api/obtenerRefCluster.feature:33
+And match response.data.data[0].name == 'string'
+match failed: EQUALS
+  $ | actual path does not exist (STRING:STRING)
+  '#notpresent'
+  'string'
+
+classpath:api/obtenerRefCluster.feature:33
 </pre>
       </div>
     </div>
@@ -532,7 +609,169 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.data.data[0].label == 'string'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def responseText = karate.pretty(response)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def isValid = schemaUtil.isValid(schemaText, responseText)</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">match isValid == true</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print 'Consulta exitosa de Ref Clusters:', response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print response</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
   <span class="name">print '=== TIEMPO DE RESPUESTA ===', responseTime / 1000, 's'</span>
 
@@ -548,17 +787,6 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
-          <a>Doc string</a>
-      </div>
-      <div id="msg-5" class="collapse collapsable-details">
-        <pre>13:19:10.902 [print] === TIEMPO DE RESPUESTA === 0.175 s 
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 

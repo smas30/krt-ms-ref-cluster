@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "required": ["success", "data", "timestamp"],
+  "properties": {
+    "success": { "type": "boolean" },
+    "timestamp": { "type": "integer" },
+    "data": {
+      "type": "object",
+      "required": ["data", "total", "page", "limit", "hasNext", "hasPrev", "next", "prev", "pages", "last", "first"],
+      "properties": {
+        "data": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "label", "name", "refClusterStatus", "idCluster", "regionId"],
+            "properties": {
+              "id": { "type": "integer" },
+              "label": { "type": "string" },
+              "name": { "type": "string" },
+              "refClusterStatus": { "type": "integer" },
+              "idCluster": { "type": "integer" },
+              "regionId": { "type": "integer" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "total": { "type": "integer" },
+        "page": { "type": "integer" },
+        "limit": { "type": "integer" },
+        "hasNext": { "type": "boolean" },
+        "hasPrev": { "type": "boolean" },
+        "next": { "type": "integer" },
+        "prev": { "type": "integer" },
+        "pages": { "type": "integer" },
+        "last": { "type": "integer" },
+        "first": { "type": "integer" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

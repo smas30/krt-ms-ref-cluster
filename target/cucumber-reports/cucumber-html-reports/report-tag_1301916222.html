@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1.0) - Tag: @refClustersValido</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>krt-ms-ref-cluster</td>
+        <td>1.0</td>
+      <td>19 ago. 2025, 19:26</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Tag Report</h2>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+
+<thead>
+  <tr class="header dont-sort">
+      <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Tag</th>
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">@refClustersValido</td>
+          <td      class="passed"    >12</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">12</td>
+
+          <td  class="passed"    >1</td>
+          <td >0</td>
+          <td class="total">1</td>
+
+          <td class="duration" data-value="344602300">0.344</td>
+          <td class="passed">Passed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="elements">
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1993266736.html">api/obtenerRefCluster.feature</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_1485807773.html">@obtenerRefCluster</a>
+       <a href="report-tag_1301916222.html">@refClustersValido</a>
+</div>
+
+
+  <span class="lead-duration duration">0.344</span>
+
+
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+
+<div class="brief passed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Obtener Ref Clusters sin filtros</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+      <div class="step">
+
+
+<div class="brief step-name-Given passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url baseUrl</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">param limit = 1000</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">param page = 1</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-When passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method GET</span>
+
+  <span class="lead-duration duration">0.266</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>19:26:03.583 request:
+1 &gt; GET http://10.161.169.27:8517/api/v1/estaciones/ref-clusters?limit=1000&amp;page=1
+1 &gt; Content-Type: application/json
+1 &gt; X-USER-ID: E11011
+1 &gt; X-CORRELATION-ID: 1445|E11011|234234
+1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkFEQkRDNEJDQ0NFNzkyRDQ0NzgwRUZDMzg0QkE4NDY3Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ1OTYzLCJleHAiOjE3NTU2NDk1NjN9.cLxywitJE3YqpnGsUHAvAeFvo1PCyt0CCq_2NNYNuUElvfpRQJFyuzbiY3tttrly
+1 &gt; Host: 10.161.169.27:8517
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+19:26:03.844 response time in milliseconds: 260
+1 &lt; 200
+1 &lt; content-length: 7379
+1 &lt; Content-Type: application/json;charset=UTF-8
+{&quot;success&quot;:true,&quot;data&quot;:{&quot;data&quot;:[{&quot;id&quot;:123,&quot;label&quot;:&quot;Caracas Subterranea&quot;,&quot;name&quot;:&quot;Caracas Subterranea&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:13,&quot;regionId&quot;:1},{&quot;id&quot;:64,&quot;label&quot;:&quot;Gran Caracas&quot;,&quot;name&quot;:&quot;Gran Caracas&quot;,&quot;refClusterStatus&quot;:0,&quot;idCluster&quot;:12,&quot;regionId&quot;:1},{&quot;id&quot;:63,&quot;label&quot;:&quot;El Junquito&quot;,&quot;name&quot;:&quot;El Junquito&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:11,&quot;regionId&quot;:1},{&quot;id&quot;:62,&quot;label&quot;:&quot;Valles del Tuy&quot;,&quot;name&quot;:&quot;Valles del Tuy&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:10,&quot;regionId&quot;:1},{&quot;id&quot;:79,&quot;label&quot;:&quot;Centro Llanos&quot;,&quot;name&quot;:&quot;Centro Llanos&quot;,&quot;refClusterStatus&quot;:0,&quot;idCluster&quot;:9,&quot;regionId&quot;:3},{&quot;id&quot;:61,&quot;label&quot;:&quot;Higuerote&quot;,&quot;name&quot;:&quot;Higuerote&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:9,&quot;regionId&quot;:1},{&quot;id&quot;:78,&quot;label&quot;:&quot;Colonia Tovar&quot;,&quot;name&quot;:&quot;Colonia Tovar&quot;,&quot;refClusterStatus&quot;:0,&quot;idCluster&quot;:8,&quot;regionId&quot;:3},{&quot;id&quot;:60,&quot;label&quot;:&quot;Los Teques&quot;,&quot;name&quot;:&quot;Los Teques&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:8,&quot;regionId&quot;:1},{&quot;id&quot;:122,&quot;label&quot;:&quot;Guayana Sur&quot;,&quot;name&quot;:&quot;Guayana Sur&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:8,&quot;regionId&quot;:8},{&quot;id&quot;:121,&quot;label&quot;:&quot;Paria&quot;,&quot;name&quot;:&quot;Paria&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:8,&quot;regionId&quot;:7},{&quot;id&quot;:103,&quot;label&quot;:&quot;Guiria&quot;,&quot;name&quot;:&quot;Guiria&quot;,&quot;refClusterStatus&quot;:0,&quot;idCluster&quot;:7,&quot;regionId&quot;:7},{&quot;id&quot;:120,&quot;label&quot;:&quot;San Felix&quot;,&quot;name&quot;:&quot;San Felix&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:7,&quot;regionId&quot;:8},{&quot;id&quot;:59,&quot;label&quot;:&quot;Litoral&quot;,&quot;name&quot;:&quot;Litoral&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:7,&quot;regionId&quot;:1},{&quot;id&quot;:116,&quot;label&quot;:&quot;Maracaibo Centro&quot;,&quot;name&quot;:&quot;Maracaibo Centro&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:7,&quot;regionId&quot;:2},{&quot;id&quot;:77,&quot;label&quot;:&quot;Zaraza&quot;,&quot;name&quot;:&quot;Zaraza&quot;,&quot;refClusterStatus&quot;:0,&quot;idCluster&quot;:7,&quot;regionId&quot;:3},{&quot;id&quot;:118,&quot;label&quot;:&quot;Valencia Oeste&quot;,&quot;name&quot;:&quot;Valencia Oeste&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:6,&quot;regionId&quot;:4},{&quot;id&quot;:70,&quot;label&quot;:&quot;Punto Fijo&quot;,&quot;name&quot;:&quot;Punto Fijo&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:6,&quot;regionId&quot;:2},{&quot;id&quot;:102,&quot;label&quot;:&quot;El Tigre&quot;,&quot;name&quot;:&quot;El Tigre&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:6,&quot;regionId&quot;:7},{&quot;id&quot;:89,&quot;label&quot;:&quot;Guasdualito&quot;,&quot;name&quot;:&quot;Guasdualito&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:6,&quot;regionId&quot;:5},{&quot;id&quot;:58,&quot;label&quot;:&quot;Guarenas Guatire&quot;,&quot;name&quot;:&quot;Guarenas Guatire&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:6,&quot;regionId&quot;:1},{&quot;id&quot;:95,&quot;label&quot;:&quot;Barinas&quot;,&quot;name&quot;:&quot;Barinas&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:6,&quot;regionId&quot;:6},{&quot;id&quot;:119,&quot;label&quot;:&quot;Maturin Foranea&quot;,&quot;name&quot;:&quot;Maturin Foranea&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:6,&quot;regionId&quot;:8},{&quot;id&quot;:76,&quot;label&quot;:&quot;Valle de La Pascua&quot;,&quot;name&quot;:&quot;Valle de La Pascua&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:6,&quot;regionId&quot;:3},{&quot;id&quot;:109,&quot;label&quot;:&quot;Maturin&quot;,&quot;name&quot;:&quot;Maturin&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:5,&quot;regionId&quot;:8},{&quot;id&quot;:117,&quot;label&quot;:&quot;Valencia Este&quot;,&quot;name&quot;:&quot;Valencia Este&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:5,&quot;regionId&quot;:4},{&quot;id&quot;:69,&quot;label&quot;:&quot;Coro&quot;,&quot;name&quot;:&quot;Coro&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:5,&quot;regionId&quot;:2},{&quot;id&quot;:75,&quot;label&quot;:&quot;San Fernando de Apure&quot;,&quot;name&quot;:&quot;San Fernando de Apure&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:5,&quot;regionId&quot;:3},{&quot;id&quot;:57,&quot;label&quot;:&quot;Caracas Este&quot;,&quot;name&quot;:&quot;Caracas Este&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:5,&quot;regionId&quot;:1},{&quot;id&quot;:101,&quot;label&quot;:&quot;Carupano&quot;,&quot;name&quot;:&quot;Carupano&quot;,&quot;refClusterStatus&quot;:0,&quot;idCluster&quot;:5,&quot;regionId&quot;:7},{&quot;id&quot;:88,&quot;label&quot;:&quot;San Telmo&quot;,&quot;name&quot;:&quot;San Telmo&quot;,&quot;refClusterStatus&quot;:0,&quot;idCluster&quot;:5,&quot;regionId&quot;:5},{&quot;id&quot;:94,&quot;label&quot;:&quot;San Felipe&quot;,&quot;name&quot;:&quot;San Felipe&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:5,&quot;regionId&quot;:6},{&quot;id&quot;:56,&quot;label&quot;:&quot;Caracas Oeste&quot;,&quot;name&quot;:&quot;Caracas Oeste&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:4,&quot;regionId&quot;:1},{&quot;id&quot;:108,&quot;label&quot;:&quot;Sta. Elena de Uairen&quot;,&quot;name&quot;:&quot;Sta. Elena de Uairen&quot;,&quot;refClusterStatus&quot;:0,&quot;idCluster&quot;:4,&quot;regionId&quot;:8},{&quot;id&quot;:100,&quot;label&quot;:&quot;Anaco&quot;,&quot;name&quot;:&quot;Anaco&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:4,&quot;regionId&quot;:7},{&quot;id&quot;:74,&quot;label&quot;:&quot;Calabozo&quot;,&quot;name&quot;:&quot;Calabozo&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:4,&quot;regionId&quot;:3},{&quot;id&quot;:68,&quot;label&quot;:&quot;COL&quot;,&quot;name&quot;:&quot;COL&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:4,&quot;regionId&quot;:2},{&quot;id&quot;:83,&quot;label&quot;:&quot;Centro&quot;,&quot;name&quot;:&quot;Centro&quot;,&quot;refClusterStatus&quot;:0,&quot;idCluster&quot;:4,&quot;regionId&quot;:4},{&quot;id&quot;:87,&quot;label&quot;:&quot;El Vigia&quot;,&quot;name&quot;:&quot;El Vigia&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:4,&quot;regionId&quot;:5},{&quot;id&quot;:93,&quot;label&quot;:&quot;Guanare&quot;,&quot;name&quot;:&quot;Guanare&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:4,&quot;regionId&quot;:6},{&quot;id&quot;:86,&quot;label&quot;:&quot;Merida&quot;,&quot;name&quot;:&quot;Merida&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:3,&quot;regionId&quot;:5},{&quot;id&quot;:82,&quot;label&quot;:&quot;San Carlos&quot;,&quot;name&quot;:&quot;San Carlos&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:3,&quot;regionId&quot;:4},{&quot;id&quot;:92,&quot;label&quot;:&quot;Acarigua&quot;,&quot;name&quot;:&quot;Acarigua&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:3,&quot;regionId&quot;:6},{&quot;id&quot;:73,&quot;label&quot;:&quot;San Juan de Los Morros&quot;,&quot;name&quot;:&quot;San Juan de Los Morros&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:3,&quot;regionId&quot;:3},{&quot;id&quot;:99,&quot;label&quot;:&quot;Cumana&quot;,&quot;name&quot;:&quot;Cumana&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:3,&quot;regionId&quot;:7},{&quot;id&quot;:107,&quot;label&quot;:&quot;Tucupita&quot;,&quot;name&quot;:&quot;Tucupita&quot;,&quot;refClusterStatus&quot;:0,&quot;idCluster&quot;:3,&quot;regionId&quot;:8},{&quot;id&quot;:67,&quot;label&quot;:&quot;Perija&quot;,&quot;name&quot;:&quot;Perija&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:3,&quot;regionId&quot;:2},{&quot;id&quot;:55,&quot;label&quot;:&quot;Caracas Sur&quot;,&quot;name&quot;:&quot;Caracas Sur&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:3,&quot;regionId&quot;:1},{&quot;id&quot;:106,&quot;label&quot;:&quot;Ciudad Bolivar&quot;,&quot;name&quot;:&quot;Ciudad Bolivar&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:2,&quot;regionId&quot;:8},{&quot;id&quot;:54,&quot;label&quot;:&quot;Caracas Centro&quot;,&quot;name&quot;:&quot;Caracas Centro&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:2,&quot;regionId&quot;:1},{&quot;id&quot;:66,&quot;label&quot;:&quot;Maracaibo Sur&quot;,&quot;name&quot;:&quot;Maracaibo Sur&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:2,&quot;regionId&quot;:2},{&quot;id&quot;:72,&quot;label&quot;:&quot;La Victoria&quot;,&quot;name&quot;:&quot;La Victoria&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:2,&quot;regionId&quot;:3},{&quot;id&quot;:81,&quot;label&quot;:&quot;Puerto Cabello&quot;,&quot;name&quot;:&quot;Puerto Cabello&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:2,&quot;regionId&quot;:4},{&quot;id&quot;:85,&quot;label&quot;:&quot;Valera&quot;,&quot;name&quot;:&quot;Valera&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:2,&quot;regionId&quot;:5},{&quot;id&quot;:91,&quot;label&quot;:&quot;Carora&quot;,&quot;name&quot;:&quot;Carora&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:2,&quot;regionId&quot;:6},{&quot;id&quot;:98,&quot;label&quot;:&quot;Porlamar&quot;,&quot;name&quot;:&quot;Porlamar&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:2,&quot;regionId&quot;:7},{&quot;id&quot;:53,&quot;label&quot;:&quot;Caracas Norte&quot;,&quot;name&quot;:&quot;Caracas Norte&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:1,&quot;regionId&quot;:1},{&quot;id&quot;:105,&quot;label&quot;:&quot;Puerto Ordaz&quot;,&quot;name&quot;:&quot;Puerto Ordaz&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:1,&quot;regionId&quot;:8},{&quot;id&quot;:113,&quot;label&quot;:&quot;Default&quot;,&quot;name&quot;:&quot;Default&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:1,&quot;regionId&quot;:6},{&quot;id&quot;:114,&quot;label&quot;:&quot;Default&quot;,&quot;name&quot;:&quot;Default&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:1,&quot;regionId&quot;:7},{&quot;id&quot;:115,&quot;label&quot;:&quot;Default&quot;,&quot;name&quot;:&quot;Default&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:1,&quot;regionId&quot;:8},{&quot;id&quot;:97,&quot;label&quot;:&quot;Puerto La Cruz&quot;,&quot;name&quot;:&quot;Puerto La Cruz&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:1,&quot;regionId&quot;:7},{&quot;id&quot;:90,&quot;label&quot;:&quot;Barquisimeto&quot;,&quot;name&quot;:&quot;Barquisimeto&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:1,&quot;regionId&quot;:6},{&quot;id&quot;:84,&quot;label&quot;:&quot;San Cristobal&quot;,&quot;name&quot;:&quot;San Cristobal&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:1,&quot;regionId&quot;:5},{&quot;id&quot;:80,&quot;label&quot;:&quot;Valencia Norte&quot;,&quot;name&quot;:&quot;Valencia Norte&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:1,&quot;regionId&quot;:4},{&quot;id&quot;:71,&quot;label&quot;:&quot;Maracay&quot;,&quot;name&quot;:&quot;Maracay&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:1,&quot;regionId&quot;:3},{&quot;id&quot;:65,&quot;label&quot;:&quot;Maracaibo Norte&quot;,&quot;name&quot;:&quot;Maracaibo Norte&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:1,&quot;regionId&quot;:2},{&quot;id&quot;:110,&quot;label&quot;:&quot;Default&quot;,&quot;name&quot;:&quot;Default&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:1,&quot;regionId&quot;:3},{&quot;id&quot;:111,&quot;label&quot;:&quot;Default&quot;,&quot;name&quot;:&quot;Default&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:1,&quot;regionId&quot;:4},{&quot;id&quot;:112,&quot;label&quot;:&quot;Default&quot;,&quot;name&quot;:&quot;Default&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:1,&quot;regionId&quot;:5},{&quot;id&quot;:104,&quot;label&quot;:&quot;Default&quot;,&quot;name&quot;:&quot;Default&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:0,&quot;regionId&quot;:2},{&quot;id&quot;:0,&quot;label&quot;:&quot;Caracas Norte&quot;,&quot;name&quot;:&quot;Caracas Norte&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:0,&quot;regionId&quot;:1},{&quot;id&quot;:96,&quot;label&quot;:&quot;Default&quot;,&quot;name&quot;:&quot;Default&quot;,&quot;refClusterStatus&quot;:1,&quot;idCluster&quot;:0,&quot;regionId&quot;:1}],&quot;total&quot;:72,&quot;page&quot;:1,&quot;limit&quot;:1000,&quot;hasNext&quot;:false,&quot;hasPrev&quot;:false,&quot;next&quot;:1,&quot;prev&quot;:1,&quot;pages&quot;:1,&quot;last&quot;:1,&quot;first&quot;:1},&quot;timestamp&quot;:1755645963810}
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.success == true</span>
+
+  <span class="lead-duration duration">0.001</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response.data.data == '#array'</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def responseText = karate.pretty(response)</span>
+
+  <span class="lead-duration duration">0.032</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def isValid = schemaUtil.isValid(schemaText, responseText)</span>
+
+  <span class="lead-duration duration">0.034</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">match isValid == true</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">print 'Consulta sin filtros exitosa:', response</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>19:26:03.918 [print] Consulta sin filtros exitosa: {
+  &quot;success&quot;: true,
+  &quot;data&quot;: {
+    &quot;data&quot;: [
+      {
+        &quot;id&quot;: 123,
+        &quot;label&quot;: &quot;Caracas Subterranea&quot;,
+        &quot;name&quot;: &quot;Caracas Subterranea&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 13,
+        &quot;regionId&quot;: 1
+      },
+      {
+        &quot;id&quot;: 64,
+        &quot;label&quot;: &quot;Gran Caracas&quot;,
+        &quot;name&quot;: &quot;Gran Caracas&quot;,
+        &quot;refClusterStatus&quot;: 0,
+        &quot;idCluster&quot;: 12,
+        &quot;regionId&quot;: 1
+      },
+      {
+        &quot;id&quot;: 63,
+        &quot;label&quot;: &quot;El Junquito&quot;,
+        &quot;name&quot;: &quot;El Junquito&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 11,
+        &quot;regionId&quot;: 1
+      },
+      {
+        &quot;id&quot;: 62,
+        &quot;label&quot;: &quot;Valles del Tuy&quot;,
+        &quot;name&quot;: &quot;Valles del Tuy&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 10,
+        &quot;regionId&quot;: 1
+      },
+      {
+        &quot;id&quot;: 79,
+        &quot;label&quot;: &quot;Centro Llanos&quot;,
+        &quot;name&quot;: &quot;Centro Llanos&quot;,
+        &quot;refClusterStatus&quot;: 0,
+        &quot;idCluster&quot;: 9,
+        &quot;regionId&quot;: 3
+      },
+      {
+        &quot;id&quot;: 61,
+        &quot;label&quot;: &quot;Higuerote&quot;,
+        &quot;name&quot;: &quot;Higuerote&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 9,
+        &quot;regionId&quot;: 1
+      },
+      {
+        &quot;id&quot;: 78,
+        &quot;label&quot;: &quot;Colonia Tovar&quot;,
+        &quot;name&quot;: &quot;Colonia Tovar&quot;,
+        &quot;refClusterStatus&quot;: 0,
+        &quot;idCluster&quot;: 8,
+        &quot;regionId&quot;: 3
+      },
+      {
+        &quot;id&quot;: 60,
+        &quot;label&quot;: &quot;Los Teques&quot;,
+        &quot;name&quot;: &quot;Los Teques&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 8,
+        &quot;regionId&quot;: 1
+      },
+      {
+        &quot;id&quot;: 122,
+        &quot;label&quot;: &quot;Guayana Sur&quot;,
+        &quot;name&quot;: &quot;Guayana Sur&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 8,
+        &quot;regionId&quot;: 8
+      },
+      {
+        &quot;id&quot;: 121,
+        &quot;label&quot;: &quot;Paria&quot;,
+        &quot;name&quot;: &quot;Paria&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 8,
+        &quot;regionId&quot;: 7
+      },
+      {
+        &quot;id&quot;: 103,
+        &quot;label&quot;: &quot;Guiria&quot;,
+        &quot;name&quot;: &quot;Guiria&quot;,
+        &quot;refClusterStatus&quot;: 0,
+        &quot;idCluster&quot;: 7,
+        &quot;regionId&quot;: 7
+      },
+      {
+        &quot;id&quot;: 120,
+        &quot;label&quot;: &quot;San Felix&quot;,
+        &quot;name&quot;: &quot;San Felix&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 7,
+        &quot;regionId&quot;: 8
+      },
+      {
+        &quot;id&quot;: 59,
+        &quot;label&quot;: &quot;Litoral&quot;,
+        &quot;name&quot;: &quot;Litoral&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 7,
+        &quot;regionId&quot;: 1
+      },
+      {
+        &quot;id&quot;: 116,
+        &quot;label&quot;: &quot;Maracaibo Centro&quot;,
+        &quot;name&quot;: &quot;Maracaibo Centro&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 7,
+        &quot;regionId&quot;: 2
+      },
+      {
+        &quot;id&quot;: 77,
+        &quot;label&quot;: &quot;Zaraza&quot;,
+        &quot;name&quot;: &quot;Zaraza&quot;,
+        &quot;refClusterStatus&quot;: 0,
+        &quot;idCluster&quot;: 7,
+        &quot;regionId&quot;: 3
+      },
+      {
+        &quot;id&quot;: 118,
+        &quot;label&quot;: &quot;Valencia Oeste&quot;,
+        &quot;name&quot;: &quot;Valencia Oeste&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 6,
+        &quot;regionId&quot;: 4
+      },
+      {
+        &quot;id&quot;: 70,
+        &quot;label&quot;: &quot;Punto Fijo&quot;,
+        &quot;name&quot;: &quot;Punto Fijo&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 6,
+        &quot;regionId&quot;: 2
+      },
+      {
+        &quot;id&quot;: 102,
+        &quot;label&quot;: &quot;El Tigre&quot;,
+        &quot;name&quot;: &quot;El Tigre&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 6,
+        &quot;regionId&quot;: 7
+      },
+      {
+        &quot;id&quot;: 89,
+        &quot;label&quot;: &quot;Guasdualito&quot;,
+        &quot;name&quot;: &quot;Guasdualito&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 6,
+        &quot;regionId&quot;: 5
+      },
+      {
+        &quot;id&quot;: 58,
+        &quot;label&quot;: &quot;Guarenas Guatire&quot;,
+        &quot;name&quot;: &quot;Guarenas Guatire&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 6,
+        &quot;regionId&quot;: 1
+      },
+      {
+        &quot;id&quot;: 95,
+        &quot;label&quot;: &quot;Barinas&quot;,
+        &quot;name&quot;: &quot;Barinas&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 6,
+        &quot;regionId&quot;: 6
+      },
+      {
+        &quot;id&quot;: 119,
+        &quot;label&quot;: &quot;Maturin Foranea&quot;,
+        &quot;name&quot;: &quot;Maturin Foranea&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 6,
+        &quot;regionId&quot;: 8
+      },
+      {
+        &quot;id&quot;: 76,
+        &quot;label&quot;: &quot;Valle de La Pascua&quot;,
+        &quot;name&quot;: &quot;Valle de La Pascua&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 6,
+        &quot;regionId&quot;: 3
+      },
+      {
+        &quot;id&quot;: 109,
+        &quot;label&quot;: &quot;Maturin&quot;,
+        &quot;name&quot;: &quot;Maturin&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 5,
+        &quot;regionId&quot;: 8
+      },
+      {
+        &quot;id&quot;: 117,
+        &quot;label&quot;: &quot;Valencia Este&quot;,
+        &quot;name&quot;: &quot;Valencia Este&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 5,
+        &quot;regionId&quot;: 4
+      },
+      {
+        &quot;id&quot;: 69,
+        &quot;label&quot;: &quot;Coro&quot;,
+        &quot;name&quot;: &quot;Coro&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 5,
+        &quot;regionId&quot;: 2
+      },
+      {
+        &quot;id&quot;: 75,
+        &quot;label&quot;: &quot;San Fernando de Apure&quot;,
+        &quot;name&quot;: &quot;San Fernando de Apure&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 5,
+        &quot;regionId&quot;: 3
+      },
+      {
+        &quot;id&quot;: 57,
+        &quot;label&quot;: &quot;Caracas Este&quot;,
+        &quot;name&quot;: &quot;Caracas Este&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 5,
+        &quot;regionId&quot;: 1
+      },
+      {
+        &quot;id&quot;: 101,
+        &quot;label&quot;: &quot;Carupano&quot;,
+        &quot;name&quot;: &quot;Carupano&quot;,
+        &quot;refClusterStatus&quot;: 0,
+        &quot;idCluster&quot;: 5,
+        &quot;regionId&quot;: 7
+      },
+      {
+        &quot;id&quot;: 88,
+        &quot;label&quot;: &quot;San Telmo&quot;,
+        &quot;name&quot;: &quot;San Telmo&quot;,
+        &quot;refClusterStatus&quot;: 0,
+        &quot;idCluster&quot;: 5,
+        &quot;regionId&quot;: 5
+      },
+      {
+        &quot;id&quot;: 94,
+        &quot;label&quot;: &quot;San Felipe&quot;,
+        &quot;name&quot;: &quot;San Felipe&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 5,
+        &quot;regionId&quot;: 6
+      },
+      {
+        &quot;id&quot;: 56,
+        &quot;label&quot;: &quot;Caracas Oeste&quot;,
+        &quot;name&quot;: &quot;Caracas Oeste&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 4,
+        &quot;regionId&quot;: 1
+      },
+      {
+        &quot;id&quot;: 108,
+        &quot;label&quot;: &quot;Sta. Elena de Uairen&quot;,
+        &quot;name&quot;: &quot;Sta. Elena de Uairen&quot;,
+        &quot;refClusterStatus&quot;: 0,
+        &quot;idCluster&quot;: 4,
+        &quot;regionId&quot;: 8
+      },
+      {
+        &quot;id&quot;: 100,
+        &quot;label&quot;: &quot;Anaco&quot;,
+        &quot;name&quot;: &quot;Anaco&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 4,
+        &quot;regionId&quot;: 7
+      },
+      {
+        &quot;id&quot;: 74,
+        &quot;label&quot;: &quot;Calabozo&quot;,
+        &quot;name&quot;: &quot;Calabozo&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 4,
+        &quot;regionId&quot;: 3
+      },
+      {
+        &quot;id&quot;: 68,
+        &quot;label&quot;: &quot;COL&quot;,
+        &quot;name&quot;: &quot;COL&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 4,
+        &quot;regionId&quot;: 2
+      },
+      {
+        &quot;id&quot;: 83,
+        &quot;label&quot;: &quot;Centro&quot;,
+        &quot;name&quot;: &quot;Centro&quot;,
+        &quot;refClusterStatus&quot;: 0,
+        &quot;idCluster&quot;: 4,
+        &quot;regionId&quot;: 4
+      },
+      {
+        &quot;id&quot;: 87,
+        &quot;label&quot;: &quot;El Vigia&quot;,
+        &quot;name&quot;: &quot;El Vigia&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 4,
+        &quot;regionId&quot;: 5
+      },
+      {
+        &quot;id&quot;: 93,
+        &quot;label&quot;: &quot;Guanare&quot;,
+        &quot;name&quot;: &quot;Guanare&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 4,
+        &quot;regionId&quot;: 6
+      },
+      {
+        &quot;id&quot;: 86,
+        &quot;label&quot;: &quot;Merida&quot;,
+        &quot;name&quot;: &quot;Merida&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 3,
+        &quot;regionId&quot;: 5
+      },
+      {
+        &quot;id&quot;: 82,
+        &quot;label&quot;: &quot;San Carlos&quot;,
+        &quot;name&quot;: &quot;San Carlos&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 3,
+        &quot;regionId&quot;: 4
+      },
+      {
+        &quot;id&quot;: 92,
+        &quot;label&quot;: &quot;Acarigua&quot;,
+        &quot;name&quot;: &quot;Acarigua&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 3,
+        &quot;regionId&quot;: 6
+      },
+      {
+        &quot;id&quot;: 73,
+        &quot;label&quot;: &quot;San Juan de Los Morros&quot;,
+        &quot;name&quot;: &quot;San Juan de Los Morros&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 3,
+        &quot;regionId&quot;: 3
+      },
+      {
+        &quot;id&quot;: 99,
+        &quot;label&quot;: &quot;Cumana&quot;,
+        &quot;name&quot;: &quot;Cumana&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 3,
+        &quot;regionId&quot;: 7
+      },
+      {
+        &quot;id&quot;: 107,
+        &quot;label&quot;: &quot;Tucupita&quot;,
+        &quot;name&quot;: &quot;Tucupita&quot;,
+        &quot;refClusterStatus&quot;: 0,
+        &quot;idCluster&quot;: 3,
+        &quot;regionId&quot;: 8
+      },
+      {
+        &quot;id&quot;: 67,
+        &quot;label&quot;: &quot;Perija&quot;,
+        &quot;name&quot;: &quot;Perija&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 3,
+        &quot;regionId&quot;: 2
+      },
+      {
+        &quot;id&quot;: 55,
+        &quot;label&quot;: &quot;Caracas Sur&quot;,
+        &quot;name&quot;: &quot;Caracas Sur&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 3,
+        &quot;regionId&quot;: 1
+      },
+      {
+        &quot;id&quot;: 106,
+        &quot;label&quot;: &quot;Ciudad Bolivar&quot;,
+        &quot;name&quot;: &quot;Ciudad Bolivar&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 2,
+        &quot;regionId&quot;: 8
+      },
+      {
+        &quot;id&quot;: 54,
+        &quot;label&quot;: &quot;Caracas Centro&quot;,
+        &quot;name&quot;: &quot;Caracas Centro&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 2,
+        &quot;regionId&quot;: 1
+      },
+      {
+        &quot;id&quot;: 66,
+        &quot;label&quot;: &quot;Maracaibo Sur&quot;,
+        &quot;name&quot;: &quot;Maracaibo Sur&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 2,
+        &quot;regionId&quot;: 2
+      },
+      {
+        &quot;id&quot;: 72,
+        &quot;label&quot;: &quot;La Victoria&quot;,
+        &quot;name&quot;: &quot;La Victoria&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 2,
+        &quot;regionId&quot;: 3
+      },
+      {
+        &quot;id&quot;: 81,
+        &quot;label&quot;: &quot;Puerto Cabello&quot;,
+        &quot;name&quot;: &quot;Puerto Cabello&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 2,
+        &quot;regionId&quot;: 4
+      },
+      {
+        &quot;id&quot;: 85,
+        &quot;label&quot;: &quot;Valera&quot;,
+        &quot;name&quot;: &quot;Valera&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 2,
+        &quot;regionId&quot;: 5
+      },
+      {
+        &quot;id&quot;: 91,
+        &quot;label&quot;: &quot;Carora&quot;,
+        &quot;name&quot;: &quot;Carora&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 2,
+        &quot;regionId&quot;: 6
+      },
+      {
+        &quot;id&quot;: 98,
+        &quot;label&quot;: &quot;Porlamar&quot;,
+        &quot;name&quot;: &quot;Porlamar&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 2,
+        &quot;regionId&quot;: 7
+      },
+      {
+        &quot;id&quot;: 53,
+        &quot;label&quot;: &quot;Caracas Norte&quot;,
+        &quot;name&quot;: &quot;Caracas Norte&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 1,
+        &quot;regionId&quot;: 1
+      },
+      {
+        &quot;id&quot;: 105,
+        &quot;label&quot;: &quot;Puerto Ordaz&quot;,
+        &quot;name&quot;: &quot;Puerto Ordaz&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 1,
+        &quot;regionId&quot;: 8
+      },
+      {
+        &quot;id&quot;: 113,
+        &quot;label&quot;: &quot;Default&quot;,
+        &quot;name&quot;: &quot;Default&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 1,
+        &quot;regionId&quot;: 6
+      },
+      {
+        &quot;id&quot;: 114,
+        &quot;label&quot;: &quot;Default&quot;,
+        &quot;name&quot;: &quot;Default&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 1,
+        &quot;regionId&quot;: 7
+      },
+      {
+        &quot;id&quot;: 115,
+        &quot;label&quot;: &quot;Default&quot;,
+        &quot;name&quot;: &quot;Default&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 1,
+        &quot;regionId&quot;: 8
+      },
+      {
+        &quot;id&quot;: 97,
+        &quot;label&quot;: &quot;Puerto La Cruz&quot;,
+        &quot;name&quot;: &quot;Puerto La Cruz&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 1,
+        &quot;regionId&quot;: 7
+      },
+      {
+        &quot;id&quot;: 90,
+        &quot;label&quot;: &quot;Barquisimeto&quot;,
+        &quot;name&quot;: &quot;Barquisimeto&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 1,
+        &quot;regionId&quot;: 6
+      },
+      {
+        &quot;id&quot;: 84,
+        &quot;label&quot;: &quot;San Cristobal&quot;,
+        &quot;name&quot;: &quot;San Cristobal&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 1,
+        &quot;regionId&quot;: 5
+      },
+      {
+        &quot;id&quot;: 80,
+        &quot;label&quot;: &quot;Valencia Norte&quot;,
+        &quot;name&quot;: &quot;Valencia Norte&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 1,
+        &quot;regionId&quot;: 4
+      },
+      {
+        &quot;id&quot;: 71,
+        &quot;label&quot;: &quot;Maracay&quot;,
+        &quot;name&quot;: &quot;Maracay&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 1,
+        &quot;regionId&quot;: 3
+      },
+      {
+        &quot;id&quot;: 65,
+        &quot;label&quot;: &quot;Maracaibo Norte&quot;,
+        &quot;name&quot;: &quot;Maracaibo Norte&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 1,
+        &quot;regionId&quot;: 2
+      },
+      {
+        &quot;id&quot;: 110,
+        &quot;label&quot;: &quot;Default&quot;,
+        &quot;name&quot;: &quot;Default&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 1,
+        &quot;regionId&quot;: 3
+      },
+      {
+        &quot;id&quot;: 111,
+        &quot;label&quot;: &quot;Default&quot;,
+        &quot;name&quot;: &quot;Default&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 1,
+        &quot;regionId&quot;: 4
+      },
+      {
+        &quot;id&quot;: 112,
+        &quot;label&quot;: &quot;Default&quot;,
+        &quot;name&quot;: &quot;Default&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 1,
+        &quot;regionId&quot;: 5
+      },
+      {
+        &quot;id&quot;: 104,
+        &quot;label&quot;: &quot;Default&quot;,
+        &quot;name&quot;: &quot;Default&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 0,
+        &quot;regionId&quot;: 2
+      },
+      {
+        &quot;id&quot;: 0,
+        &quot;label&quot;: &quot;Caracas Norte&quot;,
+        &quot;name&quot;: &quot;Caracas Norte&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 0,
+        &quot;regionId&quot;: 1
+      },
+      {
+        &quot;id&quot;: 96,
+        &quot;label&quot;: &quot;Default&quot;,
+        &quot;name&quot;: &quot;Default&quot;,
+        &quot;refClusterStatus&quot;: 1,
+        &quot;idCluster&quot;: 0,
+        &quot;regionId&quot;: 1
+      }
+    ],
+    &quot;total&quot;: 72,
+    &quot;page&quot;: 1,
+    &quot;limit&quot;: 1000,
+    &quot;hasNext&quot;: false,
+    &quot;hasPrev&quot;: false,
+    &quot;next&quot;: 1,
+    &quot;prev&quot;: 1,
+    &quot;pages&quot;: 1,
+    &quot;last&quot;: 1,
+    &quot;first&quot;: 1
+  },
+  &quot;timestamp&quot;: 1755645963810
+}
+ 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">print '=== TIEMPO DE RESPUESTA ===', responseTime / 1000, 's'</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>19:26:03.923 [print] === TIEMPO DE RESPUESTA === 0.26 s 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

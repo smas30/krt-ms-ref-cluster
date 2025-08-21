@@ -48,22 +48,22 @@ $(document).ready(function() {
 $(document).ready(function() {
 
     var chartData = {
-        labels:  [ "@obtenerLog",  "@obtenerLogEstaciones", ] ,
+        labels:  [ "@obtenerRefCluster",  "@refClustersConFiltro", ] ,
         datasets: [
             {
                 label: "Passed",
                 backgroundColor: "#92DD96",
-                data:  [ 100.00,  100.00, ] 
+                data:  [ 57.89,  57.89, ] 
             },
             {
                 label: "Failed",
                 backgroundColor: "#F2928C",
-                data:  [ 0.00,  0.00, ] 
+                data:  [ 5.26,  5.26, ] 
             },
             {
                 label: "Skipped",
                 backgroundColor: "#8AF",
-                data:  [ 0.00,  0.00, ] 
+                data:  [ 36.84,  36.84, ] 
             },
             {
                 label: "Pending",
@@ -133,9 +133,9 @@ $(document).ready(function() {
   </thead>
   <tbody>
     <tr class="info">
-      <td>krt-ms-log-estaciones</td>
+      <td>krt-ms-ref-cluster</td>
         <td>1.0</td>
-      <td>19 ago. 2025, 13:19</td>
+      <td>19 ago. 2025, 19:28</td>
     </tr>
   </tbody>
 </table>
@@ -197,38 +197,38 @@ $(document).ready(function() {
 
   <tbody>
       <tr>
-        <td class="tagname"><a href="report-tag_428755052.html">@obtenerLog</a></td>
+        <td class="tagname"><a href="report-tag_1485807773.html">@obtenerRefCluster</a></td>
 
         <td      class="passed"    >11</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >7</td>
         <td >0</td>
         <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">11</td>
+        <td class="total">19</td>
 
-        <td  class="passed"    >1</td>
         <td >0</td>
+        <td  class="failed"    >1</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="186145900">0.186</td>
-        <td class="passed">Passed</td>
+        <td class="duration" data-value="2787993300">2.787</td>
+        <td class="failed">Failed</td>
       </tr>
       <tr>
-        <td class="tagname"><a href="report-tag_4134408154.html">@obtenerLogEstaciones</a></td>
+        <td class="tagname"><a href="report-tag_1220584285.html">@refClustersConFiltro</a></td>
 
         <td      class="passed"    >11</td>
+        <td      class="failed"    >1</td>
+        <td     class="skipped"   >7</td>
         <td >0</td>
         <td >0</td>
-        <td >0</td>
-        <td >0</td>
-        <td class="total">11</td>
+        <td class="total">19</td>
 
-        <td  class="passed"    >1</td>
         <td >0</td>
+        <td  class="failed"    >1</td>
         <td class="total">1</td>
 
-        <td class="duration" data-value="186145900">0.186</td>
-        <td class="passed">Passed</td>
+        <td class="duration" data-value="2787993300">2.787</td>
+        <td class="failed">Failed</td>
       </tr>
   </tbody>
 
@@ -236,32 +236,32 @@ $(document).ready(function() {
     <tr>
       <td></td>
       <td>22</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>22</td>
-
       <td>2</td>
+      <td>14</td>
+      <td>0</td>
+      <td>0</td>
+      <td>38</td>
+
       <td>0</td>
       <td>2</td>
+      <td>2</td>
 
-      <td class="duration">0.372</td>
+      <td class="duration">5.575</td>
       <td>2</td>
     </tr>
     <tr>
       <td></td>
-      <td>100.00%</td>
-      <td>0.00%</td>
-      <td>0.00%</td>
+      <td>57.89%</td>
+      <td>5.26%</td>
+      <td>36.84%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
-      <td>100.00%</td>
       <td>0.00%</td>
-      <td></td>
-      <td></td>
       <td>100.00%</td>
+      <td></td>
+      <td></td>
+      <td>0.00%</td>
     </tr>
   </tfoot>
 </table>

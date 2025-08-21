@@ -1,98 +1,936 @@
-13:17:52.348 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
-13:17:52.354 [main] WARN  com.intuit.karate.Suite - failed to backup existing dir: target
-13:17:52.360 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
-13:17:53.787 [main] DEBUG com.intuit.karate - request:
+19:14:43.756 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+19:14:43.788 [main] WARN  com.intuit.karate.Suite - failed to backup existing dir: target
+19:14:43.798 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+19:14:46.198 [main] DEBUG com.intuit.karate - request:
 1 > POST http://10.161.169.27:8511/intraLogin
 1 > Content-Type: application/json; charset=UTF-8
 1 > Content-Length: 39
 1 > Host: 10.161.169.27:8511
 1 > Connection: Keep-Alive
-1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
 1 > Accept-Encoding: gzip,deflate
 {"login":"tns01","clave":"T3st2024.+-"}
 
-13:17:53.934 [main] DEBUG com.intuit.karate - response time in milliseconds: 143
+19:14:46.440 [main] DEBUG com.intuit.karate - response time in milliseconds: 240
 1 < 200
 1 < Content-Type: application/json
 1 < content-length: 326
-{"token":"eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkExQzNBQzY3QTQ4NDI5MDFBOTkzOEMyNDZGNUE1RjQxIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjIzODczLCJleHAiOjE3NTU2Mjc0NzN9.k6rY3sBdYzz8_nVX7u7UrL85c8h023tGsKABc_gfzMqGNgGXwPeRjARYb4Ft9dP1"}
+{"token":"eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjFCNEJEODA4NDY5RTE1QTMyNzI4Q0UwRjQ4REY4MDczIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ1Mjg2LCJleHAiOjE3NTU2NDg4ODZ9.m5cHUm5uUK8FM92FI2KjEtZOC6QNqYdXlggn4hbASpfMMIq3owDv5hjln3SCfVJa"}
 
-13:17:54.246 [main] INFO  com.intuit.karate - [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 0.143 s 
-13:17:54.255 [main] INFO  com.intuit.karate - [print] HEADERS usados: {
+19:14:46.912 [main] INFO  com.intuit.karate - [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 0.24 s 
+19:14:46.922 [main] INFO  com.intuit.karate - [print] HEADERS usados: {
   "Content-Type": "application/json",
   "X-USER-ID": "E11011",
   "X-CORRELATION-ID": "1445|E11011|234234",
-  "X-TOKEN-ID": "eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkExQzNBQzY3QTQ4NDI5MDFBOTkzOEMyNDZGNUE1RjQxIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjIzODczLCJleHAiOjE3NTU2Mjc0NzN9.k6rY3sBdYzz8_nVX7u7UrL85c8h023tGsKABc_gfzMqGNgGXwPeRjARYb4Ft9dP1"
+  "X-TOKEN-ID": "eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjFCNEJEODA4NDY5RTE1QTMyNzI4Q0UwRjQ4REY4MDczIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ1Mjg2LCJleHAiOjE3NTU2NDg4ODZ9.m5cHUm5uUK8FM92FI2KjEtZOC6QNqYdXlggn4hbASpfMMIq3owDv5hjln3SCfVJa"
 }
  
-13:17:54.256 [main] INFO  com.intuit.karate - [print] TOKEN obtenido: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkExQzNBQzY3QTQ4NDI5MDFBOTkzOEMyNDZGNUE1RjQxIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjIzODczLCJleHAiOjE3NTU2Mjc0NzN9.k6rY3sBdYzz8_nVX7u7UrL85c8h023tGsKABc_gfzMqGNgGXwPeRjARYb4Ft9dP1 
-13:17:54.265 [main] DEBUG com.intuit.karate - request:
-1 > GET http://10.161.169.27:8517/api/v1/estaciones/log-estaciones?correlationId=1445%7CE11011%7C234234&createdStartDate=2022-03-10T12%3A15%3A50&createdEndDate=2022-03-10T12%3A15%3A50&limit=10&page=1
+19:14:46.947 [main] DEBUG com.intuit.karate - request:
+1 > GET http://10.161.169.27:8517/api/v1/estaciones/ref-cluster?limit=10&page=1
 1 > Content-Type: application/json
 1 > X-USER-ID: E11011
 1 > X-CORRELATION-ID: 1445|E11011|234234
-1 > X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkExQzNBQzY3QTQ4NDI5MDFBOTkzOEMyNDZGNUE1RjQxIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjIzODczLCJleHAiOjE3NTU2Mjc0NzN9.k6rY3sBdYzz8_nVX7u7UrL85c8h023tGsKABc_gfzMqGNgGXwPeRjARYb4Ft9dP1
+1 > X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjFCNEJEODA4NDY5RTE1QTMyNzI4Q0UwRjQ4REY4MDczIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ1Mjg2LCJleHAiOjE3NTU2NDg4ODZ9.m5cHUm5uUK8FM92FI2KjEtZOC6QNqYdXlggn4hbASpfMMIq3owDv5hjln3SCfVJa
 1 > Host: 10.161.169.27:8517
 1 > Connection: Keep-Alive
-1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
 1 > Accept-Encoding: gzip,deflate
 
 
-13:17:54.480 [main] DEBUG com.intuit.karate - response time in milliseconds: 214
-1 < 200
-1 < content-length: 170
-1 < Content-Type: application/json;charset=UTF-8
-{"success":true,"data":{"data":[],"total":0,"page":1,"limit":10,"hasNext":false,"hasPrev":false,"next":1,"prev":1,"pages":0,"last":0,"first":1},"timestamp":1755623874458}
+19:14:47.081 [main] DEBUG com.intuit.karate - response time in milliseconds: 134
+1 < 400
+1 < content-length: 151
+1 < Content-Type: application/json
+{"success":false,"data":{"code":"400","status":"BAD_REQUEST","message":"HTTP 404 Not Found","errors":["HTTP 404 Not Found"]},"timestamp":1755645287049}
 
-13:17:54.486 [main] INFO  com.intuit.karate - [print] Total de logs encontrados: 0 
-13:17:54.488 [main] INFO  com.intuit.karate - [print] === TIEMPO DE RESPUESTA === 0.214 s 
-13:17:55.141 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 2 (0 remaining) classpath:api/obtenerLog.feature
-13:19:08.828 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
-13:19:08.835 [main] WARN  com.intuit.karate.Suite - failed to backup existing dir: target
-13:19:08.837 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
-13:19:10.244 [main] DEBUG com.intuit.karate - request:
+19:14:47.096 [main] ERROR com.intuit.karate - classpath:api/obtenerRefCluster.feature:46
+Then status 200
+status code was: 400, expected: 200, response time in milliseconds: 134, url: http://10.161.169.27:8517/api/v1/estaciones/ref-cluster?limit=10&page=1, response: 
+{"success":false,"data":{"code":"400","status":"BAD_REQUEST","message":"HTTP 404 Not Found","errors":["HTTP 404 Not Found"]},"timestamp":1755645287049}
+classpath:api/obtenerRefCluster.feature:46
+19:14:47.988 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 2 of 2 (0 remaining) classpath:api/obtenerRefCluster.feature
+19:16:06.870 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+19:16:06.878 [main] WARN  com.intuit.karate.Suite - failed to backup existing dir: target
+19:16:06.884 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+19:16:08.289 [main] DEBUG com.intuit.karate - request:
 1 > POST http://10.161.169.27:8511/intraLogin
 1 > Content-Type: application/json; charset=UTF-8
 1 > Content-Length: 39
 1 > Host: 10.161.169.27:8511
 1 > Connection: Keep-Alive
-1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
 1 > Accept-Encoding: gzip,deflate
 {"login":"tns01","clave":"T3st2024.+-"}
 
-13:19:10.384 [main] DEBUG com.intuit.karate - response time in milliseconds: 138
+19:16:08.423 [main] DEBUG com.intuit.karate - response time in milliseconds: 131
 1 < 200
 1 < Content-Type: application/json
 1 < content-length: 326
-{"token":"eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjkwNzFFMDU0QzZEMEUyQzExRTI3NUIzQjlFM0JEMjRFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjIzOTUwLCJleHAiOjE3NTU2Mjc1NTB9.9PIHV9ZReFKICuSptK7VlZca6mvaYwZRKLqyDR8qlFu9-yL0_p7likwFYvgCo_k2"}
+{"token":"eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjUyMkIxNEYyNDZDNjA1NjNBNDZDRDYyOTRFRDIwMEQxIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ1MzY4LCJleHAiOjE3NTU2NDg5Njh9.6ng_Pkv9D3N8VHa6YTkVL1qXvp0vi7PMry3s340nQbfuVsDVxaYubrdIAyEp5xjV"}
 
-13:19:10.706 [main] INFO  com.intuit.karate - [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 0.138 s 
-13:19:10.713 [main] INFO  com.intuit.karate - [print] HEADERS usados: {
+19:16:08.722 [main] INFO  com.intuit.karate - [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 0.131 s 
+19:16:08.732 [main] INFO  com.intuit.karate - [print] HEADERS usados: {
   "Content-Type": "application/json",
   "X-USER-ID": "E11011",
   "X-CORRELATION-ID": "1445|E11011|234234",
-  "X-TOKEN-ID": "eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjkwNzFFMDU0QzZEMEUyQzExRTI3NUIzQjlFM0JEMjRFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjIzOTUwLCJleHAiOjE3NTU2Mjc1NTB9.9PIHV9ZReFKICuSptK7VlZca6mvaYwZRKLqyDR8qlFu9-yL0_p7likwFYvgCo_k2"
+  "X-TOKEN-ID": "eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjUyMkIxNEYyNDZDNjA1NjNBNDZDRDYyOTRFRDIwMEQxIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ1MzY4LCJleHAiOjE3NTU2NDg5Njh9.6ng_Pkv9D3N8VHa6YTkVL1qXvp0vi7PMry3s340nQbfuVsDVxaYubrdIAyEp5xjV"
 }
  
-13:19:10.713 [main] INFO  com.intuit.karate - [print] TOKEN obtenido: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjkwNzFFMDU0QzZEMEUyQzExRTI3NUIzQjlFM0JEMjRFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjIzOTUwLCJleHAiOjE3NTU2Mjc1NTB9.9PIHV9ZReFKICuSptK7VlZca6mvaYwZRKLqyDR8qlFu9-yL0_p7likwFYvgCo_k2 
-13:19:10.721 [main] DEBUG com.intuit.karate - request:
-1 > GET http://10.161.169.27:8517/api/v1/estaciones/log-estaciones?correlationId=1445%7CE11011%7C234234&createdStartDate=2025-08-01T08%3A00%3A00&createdEndDate=2025-08-19T13%3A00%3A00&limit=10&page=1
+19:16:08.740 [main] DEBUG com.intuit.karate - request:
+1 > GET http://10.161.169.27:8517/api/v1/estaciones/ref-cluster?limit=10&page=1
 1 > Content-Type: application/json
 1 > X-USER-ID: E11011
 1 > X-CORRELATION-ID: 1445|E11011|234234
-1 > X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjkwNzFFMDU0QzZEMEUyQzExRTI3NUIzQjlFM0JEMjRFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjIzOTUwLCJleHAiOjE3NTU2Mjc1NTB9.9PIHV9ZReFKICuSptK7VlZca6mvaYwZRKLqyDR8qlFu9-yL0_p7likwFYvgCo_k2
+1 > X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjUyMkIxNEYyNDZDNjA1NjNBNDZDRDYyOTRFRDIwMEQxIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ1MzY4LCJleHAiOjE3NTU2NDg5Njh9.6ng_Pkv9D3N8VHa6YTkVL1qXvp0vi7PMry3s340nQbfuVsDVxaYubrdIAyEp5xjV
 1 > Host: 10.161.169.27:8517
 1 > Connection: Keep-Alive
-1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
 1 > Accept-Encoding: gzip,deflate
 
 
-13:19:10.896 [main] DEBUG com.intuit.karate - response time in milliseconds: 175
-1 < 200
-1 < content-length: 170
-1 < Content-Type: application/json;charset=UTF-8
-{"success":true,"data":{"data":[],"total":0,"page":1,"limit":10,"hasNext":false,"hasPrev":false,"next":1,"prev":1,"pages":0,"last":0,"first":1},"timestamp":1755623950877}
+19:16:08.859 [main] DEBUG com.intuit.karate - response time in milliseconds: 118
+1 < 400
+1 < content-length: 151
+1 < Content-Type: application/json
+{"success":false,"data":{"code":"400","status":"BAD_REQUEST","message":"HTTP 404 Not Found","errors":["HTTP 404 Not Found"]},"timestamp":1755645368827}
 
-13:19:10.902 [main] INFO  com.intuit.karate - [print] Total de logs encontrados: 0 
-13:19:10.902 [main] INFO  com.intuit.karate - [print] === TIEMPO DE RESPUESTA === 0.175 s 
-13:19:11.603 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 2 (0 remaining) classpath:api/obtenerLog.feature
+19:16:08.865 [main] ERROR com.intuit.karate - classpath:api/obtenerRefCluster.feature:48
+Then status 200
+status code was: 400, expected: 200, response time in milliseconds: 118, url: http://10.161.169.27:8517/api/v1/estaciones/ref-cluster?limit=10&page=1, response: 
+{"success":false,"data":{"code":"400","status":"BAD_REQUEST","message":"HTTP 404 Not Found","errors":["HTTP 404 Not Found"]},"timestamp":1755645368827}
+classpath:api/obtenerRefCluster.feature:48
+19:16:09.526 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 2 of 2 (0 remaining) classpath:api/obtenerRefCluster.feature
+19:20:20.311 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+19:20:20.321 [main] WARN  com.intuit.karate.Suite - failed to backup existing dir: target
+19:20:20.330 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+19:20:21.821 [main] DEBUG com.intuit.karate - request:
+1 > POST http://10.161.169.27:8511/intraLogin
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 39
+1 > Host: 10.161.169.27:8511
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 > Accept-Encoding: gzip,deflate
+{"login":"tns01","clave":"T3st2024.+-"}
+
+19:20:21.994 [main] DEBUG com.intuit.karate - response time in milliseconds: 173
+1 < 200
+1 < Content-Type: application/json
+1 < content-length: 326
+{"token":"eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjIyNDBGQUM0MUIzM0E1QjgzMjI0QThDMjAxQzk3RDlFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ1NjIxLCJleHAiOjE3NTU2NDkyMjF9.DnMC16cbfFpm3zUoU7t_t0lTfMDec774qcnVeuZCkImPTkSBpUaZPwdsPkeUP-fv"}
+
+19:20:22.299 [main] INFO  com.intuit.karate - [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 0.173 s 
+19:20:22.311 [main] INFO  com.intuit.karate - [print] HEADERS usados: {
+  "Content-Type": "application/json",
+  "X-USER-ID": "E11011",
+  "X-CORRELATION-ID": "1445|E11011|234234",
+  "X-TOKEN-ID": "eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjIyNDBGQUM0MUIzM0E1QjgzMjI0QThDMjAxQzk3RDlFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ1NjIxLCJleHAiOjE3NTU2NDkyMjF9.DnMC16cbfFpm3zUoU7t_t0lTfMDec774qcnVeuZCkImPTkSBpUaZPwdsPkeUP-fv"
+}
+ 
+19:20:22.311 [main] DEBUG com.intuit.karate - request:
+1 > GET http://10.161.169.27:8517/api/v1/estaciones/ref-cluster?limit=1000&page=1
+1 > Content-Type: application/json
+1 > X-USER-ID: E11011
+1 > X-CORRELATION-ID: 1445|E11011|234234
+1 > X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjIyNDBGQUM0MUIzM0E1QjgzMjI0QThDMjAxQzk3RDlFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ1NjIxLCJleHAiOjE3NTU2NDkyMjF9.DnMC16cbfFpm3zUoU7t_t0lTfMDec774qcnVeuZCkImPTkSBpUaZPwdsPkeUP-fv
+1 > Host: 10.161.169.27:8517
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:20:22.448 [main] DEBUG com.intuit.karate - response time in milliseconds: 137
+1 < 400
+1 < content-length: 151
+1 < Content-Type: application/json
+{"success":false,"data":{"code":"400","status":"BAD_REQUEST","message":"HTTP 404 Not Found","errors":["HTTP 404 Not Found"]},"timestamp":1755645622417}
+
+19:20:22.456 [main] ERROR com.intuit.karate - classpath:api/obtenerRefCluster.feature:48
+Then status 200
+status code was: 400, expected: 200, response time in milliseconds: 137, url: http://10.161.169.27:8517/api/v1/estaciones/ref-cluster?limit=1000&page=1, response: 
+{"success":false,"data":{"code":"400","status":"BAD_REQUEST","message":"HTTP 404 Not Found","errors":["HTTP 404 Not Found"]},"timestamp":1755645622417}
+classpath:api/obtenerRefCluster.feature:48
+19:20:23.108 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 2 of 2 (0 remaining) classpath:api/obtenerRefCluster.feature
+19:22:41.160 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+19:22:41.186 [main] WARN  com.intuit.karate.Suite - failed to backup existing dir: target
+19:22:41.194 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+19:22:42.548 [main] DEBUG com.intuit.karate - request:
+1 > POST http://10.161.169.27:8511/intraLogin
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 39
+1 > Host: 10.161.169.27:8511
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 > Accept-Encoding: gzip,deflate
+{"login":"tns01","clave":"T3st2024.+-"}
+
+19:22:42.680 [main] DEBUG com.intuit.karate - response time in milliseconds: 124
+1 < 200
+1 < Content-Type: application/json
+1 < content-length: 326
+{"token":"eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkJEN0EzMUMwOEZERDY2RkEyOTA2MDNBMjdENUZCRkVBIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ1NzYyLCJleHAiOjE3NTU2NDkzNjJ9.vd6IsJ-oltcQiNzKqlzdvGAVbQVA9pzeVw-YoSkqW1FZC4mZ9Ge5SZvMIVjiJl8q"}
+
+19:22:43.013 [main] INFO  com.intuit.karate - [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 0.124 s 
+19:22:43.025 [main] INFO  com.intuit.karate - [print] HEADERS usados: {
+  "Content-Type": "application/json",
+  "X-USER-ID": "E11011",
+  "X-CORRELATION-ID": "1445|E11011|234234",
+  "X-TOKEN-ID": "eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkJEN0EzMUMwOEZERDY2RkEyOTA2MDNBMjdENUZCRkVBIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ1NzYyLCJleHAiOjE3NTU2NDkzNjJ9.vd6IsJ-oltcQiNzKqlzdvGAVbQVA9pzeVw-YoSkqW1FZC4mZ9Ge5SZvMIVjiJl8q"
+}
+ 
+19:22:43.039 [main] DEBUG com.intuit.karate - request:
+1 > GET http://10.161.169.27:8517/api/v1/estaciones/ref-clusters?limit=1000&page=1
+1 > Content-Type: application/json
+1 > X-USER-ID: E11011
+1 > X-CORRELATION-ID: 1445|E11011|234234
+1 > X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkJEN0EzMUMwOEZERDY2RkEyOTA2MDNBMjdENUZCRkVBIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ1NzYyLCJleHAiOjE3NTU2NDkzNjJ9.vd6IsJ-oltcQiNzKqlzdvGAVbQVA9pzeVw-YoSkqW1FZC4mZ9Ge5SZvMIVjiJl8q
+1 > Host: 10.161.169.27:8517
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:22:43.334 [main] DEBUG com.intuit.karate - response time in milliseconds: 295
+1 < 200
+1 < content-length: 7379
+1 < Content-Type: application/json;charset=UTF-8
+{"success":true,"data":{"data":[{"id":123,"label":"Caracas Subterranea","name":"Caracas Subterranea","refClusterStatus":1,"idCluster":13,"regionId":1},{"id":64,"label":"Gran Caracas","name":"Gran Caracas","refClusterStatus":0,"idCluster":12,"regionId":1},{"id":63,"label":"El Junquito","name":"El Junquito","refClusterStatus":1,"idCluster":11,"regionId":1},{"id":62,"label":"Valles del Tuy","name":"Valles del Tuy","refClusterStatus":1,"idCluster":10,"regionId":1},{"id":79,"label":"Centro Llanos","name":"Centro Llanos","refClusterStatus":0,"idCluster":9,"regionId":3},{"id":61,"label":"Higuerote","name":"Higuerote","refClusterStatus":1,"idCluster":9,"regionId":1},{"id":78,"label":"Colonia Tovar","name":"Colonia Tovar","refClusterStatus":0,"idCluster":8,"regionId":3},{"id":60,"label":"Los Teques","name":"Los Teques","refClusterStatus":1,"idCluster":8,"regionId":1},{"id":122,"label":"Guayana Sur","name":"Guayana Sur","refClusterStatus":1,"idCluster":8,"regionId":8},{"id":121,"label":"Paria","name":"Paria","refClusterStatus":1,"idCluster":8,"regionId":7},{"id":103,"label":"Guiria","name":"Guiria","refClusterStatus":0,"idCluster":7,"regionId":7},{"id":120,"label":"San Felix","name":"San Felix","refClusterStatus":1,"idCluster":7,"regionId":8},{"id":59,"label":"Litoral","name":"Litoral","refClusterStatus":1,"idCluster":7,"regionId":1},{"id":116,"label":"Maracaibo Centro","name":"Maracaibo Centro","refClusterStatus":1,"idCluster":7,"regionId":2},{"id":77,"label":"Zaraza","name":"Zaraza","refClusterStatus":0,"idCluster":7,"regionId":3},{"id":118,"label":"Valencia Oeste","name":"Valencia Oeste","refClusterStatus":1,"idCluster":6,"regionId":4},{"id":70,"label":"Punto Fijo","name":"Punto Fijo","refClusterStatus":1,"idCluster":6,"regionId":2},{"id":102,"label":"El Tigre","name":"El Tigre","refClusterStatus":1,"idCluster":6,"regionId":7},{"id":89,"label":"Guasdualito","name":"Guasdualito","refClusterStatus":1,"idCluster":6,"regionId":5},{"id":58,"label":"Guarenas Guatire","name":"Guarenas Guatire","refClusterStatus":1,"idCluster":6,"regionId":1},{"id":95,"label":"Barinas","name":"Barinas","refClusterStatus":1,"idCluster":6,"regionId":6},{"id":119,"label":"Maturin Foranea","name":"Maturin Foranea","refClusterStatus":1,"idCluster":6,"regionId":8},{"id":76,"label":"Valle de La Pascua","name":"Valle de La Pascua","refClusterStatus":1,"idCluster":6,"regionId":3},{"id":109,"label":"Maturin","name":"Maturin","refClusterStatus":1,"idCluster":5,"regionId":8},{"id":117,"label":"Valencia Este","name":"Valencia Este","refClusterStatus":1,"idCluster":5,"regionId":4},{"id":69,"label":"Coro","name":"Coro","refClusterStatus":1,"idCluster":5,"regionId":2},{"id":75,"label":"San Fernando de Apure","name":"San Fernando de Apure","refClusterStatus":1,"idCluster":5,"regionId":3},{"id":57,"label":"Caracas Este","name":"Caracas Este","refClusterStatus":1,"idCluster":5,"regionId":1},{"id":101,"label":"Carupano","name":"Carupano","refClusterStatus":0,"idCluster":5,"regionId":7},{"id":88,"label":"San Telmo","name":"San Telmo","refClusterStatus":0,"idCluster":5,"regionId":5},{"id":94,"label":"San Felipe","name":"San Felipe","refClusterStatus":1,"idCluster":5,"regionId":6},{"id":56,"label":"Caracas Oeste","name":"Caracas Oeste","refClusterStatus":1,"idCluster":4,"regionId":1},{"id":108,"label":"Sta. Elena de Uairen","name":"Sta. Elena de Uairen","refClusterStatus":0,"idCluster":4,"regionId":8},{"id":100,"label":"Anaco","name":"Anaco","refClusterStatus":1,"idCluster":4,"regionId":7},{"id":74,"label":"Calabozo","name":"Calabozo","refClusterStatus":1,"idCluster":4,"regionId":3},{"id":68,"label":"COL","name":"COL","refClusterStatus":1,"idCluster":4,"regionId":2},{"id":83,"label":"Centro","name":"Centro","refClusterStatus":0,"idCluster":4,"regionId":4},{"id":87,"label":"El Vigia","name":"El Vigia","refClusterStatus":1,"idCluster":4,"regionId":5},{"id":93,"label":"Guanare","name":"Guanare","refClusterStatus":1,"idCluster":4,"regionId":6},{"id":86,"label":"Merida","name":"Merida","refClusterStatus":1,"idCluster":3,"regionId":5},{"id":82,"label":"San Carlos","name":"San Carlos","refClusterStatus":1,"idCluster":3,"regionId":4},{"id":92,"label":"Acarigua","name":"Acarigua","refClusterStatus":1,"idCluster":3,"regionId":6},{"id":73,"label":"San Juan de Los Morros","name":"San Juan de Los Morros","refClusterStatus":1,"idCluster":3,"regionId":3},{"id":99,"label":"Cumana","name":"Cumana","refClusterStatus":1,"idCluster":3,"regionId":7},{"id":107,"label":"Tucupita","name":"Tucupita","refClusterStatus":0,"idCluster":3,"regionId":8},{"id":67,"label":"Perija","name":"Perija","refClusterStatus":1,"idCluster":3,"regionId":2},{"id":55,"label":"Caracas Sur","name":"Caracas Sur","refClusterStatus":1,"idCluster":3,"regionId":1},{"id":106,"label":"Ciudad Bolivar","name":"Ciudad Bolivar","refClusterStatus":1,"idCluster":2,"regionId":8},{"id":54,"label":"Caracas Centro","name":"Caracas Centro","refClusterStatus":1,"idCluster":2,"regionId":1},{"id":66,"label":"Maracaibo Sur","name":"Maracaibo Sur","refClusterStatus":1,"idCluster":2,"regionId":2},{"id":72,"label":"La Victoria","name":"La Victoria","refClusterStatus":1,"idCluster":2,"regionId":3},{"id":81,"label":"Puerto Cabello","name":"Puerto Cabello","refClusterStatus":1,"idCluster":2,"regionId":4},{"id":85,"label":"Valera","name":"Valera","refClusterStatus":1,"idCluster":2,"regionId":5},{"id":91,"label":"Carora","name":"Carora","refClusterStatus":1,"idCluster":2,"regionId":6},{"id":98,"label":"Porlamar","name":"Porlamar","refClusterStatus":1,"idCluster":2,"regionId":7},{"id":53,"label":"Caracas Norte","name":"Caracas Norte","refClusterStatus":1,"idCluster":1,"regionId":1},{"id":105,"label":"Puerto Ordaz","name":"Puerto Ordaz","refClusterStatus":1,"idCluster":1,"regionId":8},{"id":113,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":1,"regionId":6},{"id":114,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":1,"regionId":7},{"id":115,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":1,"regionId":8},{"id":97,"label":"Puerto La Cruz","name":"Puerto La Cruz","refClusterStatus":1,"idCluster":1,"regionId":7},{"id":90,"label":"Barquisimeto","name":"Barquisimeto","refClusterStatus":1,"idCluster":1,"regionId":6},{"id":84,"label":"San Cristobal","name":"San Cristobal","refClusterStatus":1,"idCluster":1,"regionId":5},{"id":80,"label":"Valencia Norte","name":"Valencia Norte","refClusterStatus":1,"idCluster":1,"regionId":4},{"id":71,"label":"Maracay","name":"Maracay","refClusterStatus":1,"idCluster":1,"regionId":3},{"id":65,"label":"Maracaibo Norte","name":"Maracaibo Norte","refClusterStatus":1,"idCluster":1,"regionId":2},{"id":110,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":1,"regionId":3},{"id":111,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":1,"regionId":4},{"id":112,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":1,"regionId":5},{"id":104,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":0,"regionId":2},{"id":0,"label":"Caracas Norte","name":"Caracas Norte","refClusterStatus":1,"idCluster":0,"regionId":1},{"id":96,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":0,"regionId":1}],"total":72,"page":1,"limit":1000,"hasNext":false,"hasPrev":false,"next":1,"prev":1,"pages":1,"last":1,"first":1},"timestamp":1755645763300}
+
+19:22:43.368 [main] ERROR com.intuit.karate - classpath:api/obtenerRefCluster.feature:53
+* match isValid == true
+match failed: EQUALS
+  $ | not equal (BOOLEAN:BOOLEAN)
+  false
+  true
+
+classpath:api/obtenerRefCluster.feature:53
+19:22:44.084 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 2 of 2 (0 remaining) classpath:api/obtenerRefCluster.feature
+19:23:49.543 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+19:23:49.554 [main] WARN  com.intuit.karate.Suite - failed to backup existing dir: target
+19:23:49.559 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+19:23:51.050 [main] DEBUG com.intuit.karate - request:
+1 > POST http://10.161.169.27:8511/intraLogin
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 39
+1 > Host: 10.161.169.27:8511
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 > Accept-Encoding: gzip,deflate
+{"login":"tns01","clave":"T3st2024.+-"}
+
+19:23:51.167 [main] DEBUG com.intuit.karate - response time in milliseconds: 117
+1 < 200
+1 < Content-Type: application/json
+1 < content-length: 326
+{"token":"eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjFGRUU0OUZFM0JENjEwNDQwMjRDNDZBNTdFNDJENDY3Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ1ODMxLCJleHAiOjE3NTU2NDk0MzF9.7YNKYFiUMm7eqewr_3yu9bxkzzLWjCl34nPrn_LQB4LTWmVpwNf5qbNGS44rTUlO"}
+
+19:23:51.520 [main] INFO  com.intuit.karate - [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 0.117 s 
+19:23:51.536 [main] DEBUG com.intuit.karate - request:
+1 > GET http://10.161.169.27:8517/api/v1/estaciones/ref-clusters?limit=1000&page=1
+1 > Content-Type: application/json
+1 > X-USER-ID: E11011
+1 > X-CORRELATION-ID: 1445|E11011|234234
+1 > X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjFGRUU0OUZFM0JENjEwNDQwMjRDNDZBNTdFNDJENDY3Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ1ODMxLCJleHAiOjE3NTU2NDk0MzF9.7YNKYFiUMm7eqewr_3yu9bxkzzLWjCl34nPrn_LQB4LTWmVpwNf5qbNGS44rTUlO
+1 > Host: 10.161.169.27:8517
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:23:51.780 [main] DEBUG com.intuit.karate - response time in milliseconds: 244
+1 < 200
+1 < content-length: 7379
+1 < Content-Type: application/json;charset=UTF-8
+{"success":true,"data":{"data":[{"id":123,"label":"Caracas Subterranea","name":"Caracas Subterranea","refClusterStatus":1,"idCluster":13,"regionId":1},{"id":64,"label":"Gran Caracas","name":"Gran Caracas","refClusterStatus":0,"idCluster":12,"regionId":1},{"id":63,"label":"El Junquito","name":"El Junquito","refClusterStatus":1,"idCluster":11,"regionId":1},{"id":62,"label":"Valles del Tuy","name":"Valles del Tuy","refClusterStatus":1,"idCluster":10,"regionId":1},{"id":79,"label":"Centro Llanos","name":"Centro Llanos","refClusterStatus":0,"idCluster":9,"regionId":3},{"id":61,"label":"Higuerote","name":"Higuerote","refClusterStatus":1,"idCluster":9,"regionId":1},{"id":78,"label":"Colonia Tovar","name":"Colonia Tovar","refClusterStatus":0,"idCluster":8,"regionId":3},{"id":60,"label":"Los Teques","name":"Los Teques","refClusterStatus":1,"idCluster":8,"regionId":1},{"id":122,"label":"Guayana Sur","name":"Guayana Sur","refClusterStatus":1,"idCluster":8,"regionId":8},{"id":121,"label":"Paria","name":"Paria","refClusterStatus":1,"idCluster":8,"regionId":7},{"id":103,"label":"Guiria","name":"Guiria","refClusterStatus":0,"idCluster":7,"regionId":7},{"id":120,"label":"San Felix","name":"San Felix","refClusterStatus":1,"idCluster":7,"regionId":8},{"id":59,"label":"Litoral","name":"Litoral","refClusterStatus":1,"idCluster":7,"regionId":1},{"id":116,"label":"Maracaibo Centro","name":"Maracaibo Centro","refClusterStatus":1,"idCluster":7,"regionId":2},{"id":77,"label":"Zaraza","name":"Zaraza","refClusterStatus":0,"idCluster":7,"regionId":3},{"id":118,"label":"Valencia Oeste","name":"Valencia Oeste","refClusterStatus":1,"idCluster":6,"regionId":4},{"id":70,"label":"Punto Fijo","name":"Punto Fijo","refClusterStatus":1,"idCluster":6,"regionId":2},{"id":102,"label":"El Tigre","name":"El Tigre","refClusterStatus":1,"idCluster":6,"regionId":7},{"id":89,"label":"Guasdualito","name":"Guasdualito","refClusterStatus":1,"idCluster":6,"regionId":5},{"id":58,"label":"Guarenas Guatire","name":"Guarenas Guatire","refClusterStatus":1,"idCluster":6,"regionId":1},{"id":95,"label":"Barinas","name":"Barinas","refClusterStatus":1,"idCluster":6,"regionId":6},{"id":119,"label":"Maturin Foranea","name":"Maturin Foranea","refClusterStatus":1,"idCluster":6,"regionId":8},{"id":76,"label":"Valle de La Pascua","name":"Valle de La Pascua","refClusterStatus":1,"idCluster":6,"regionId":3},{"id":109,"label":"Maturin","name":"Maturin","refClusterStatus":1,"idCluster":5,"regionId":8},{"id":117,"label":"Valencia Este","name":"Valencia Este","refClusterStatus":1,"idCluster":5,"regionId":4},{"id":69,"label":"Coro","name":"Coro","refClusterStatus":1,"idCluster":5,"regionId":2},{"id":75,"label":"San Fernando de Apure","name":"San Fernando de Apure","refClusterStatus":1,"idCluster":5,"regionId":3},{"id":57,"label":"Caracas Este","name":"Caracas Este","refClusterStatus":1,"idCluster":5,"regionId":1},{"id":101,"label":"Carupano","name":"Carupano","refClusterStatus":0,"idCluster":5,"regionId":7},{"id":88,"label":"San Telmo","name":"San Telmo","refClusterStatus":0,"idCluster":5,"regionId":5},{"id":94,"label":"San Felipe","name":"San Felipe","refClusterStatus":1,"idCluster":5,"regionId":6},{"id":56,"label":"Caracas Oeste","name":"Caracas Oeste","refClusterStatus":1,"idCluster":4,"regionId":1},{"id":108,"label":"Sta. Elena de Uairen","name":"Sta. Elena de Uairen","refClusterStatus":0,"idCluster":4,"regionId":8},{"id":100,"label":"Anaco","name":"Anaco","refClusterStatus":1,"idCluster":4,"regionId":7},{"id":74,"label":"Calabozo","name":"Calabozo","refClusterStatus":1,"idCluster":4,"regionId":3},{"id":68,"label":"COL","name":"COL","refClusterStatus":1,"idCluster":4,"regionId":2},{"id":83,"label":"Centro","name":"Centro","refClusterStatus":0,"idCluster":4,"regionId":4},{"id":87,"label":"El Vigia","name":"El Vigia","refClusterStatus":1,"idCluster":4,"regionId":5},{"id":93,"label":"Guanare","name":"Guanare","refClusterStatus":1,"idCluster":4,"regionId":6},{"id":86,"label":"Merida","name":"Merida","refClusterStatus":1,"idCluster":3,"regionId":5},{"id":82,"label":"San Carlos","name":"San Carlos","refClusterStatus":1,"idCluster":3,"regionId":4},{"id":92,"label":"Acarigua","name":"Acarigua","refClusterStatus":1,"idCluster":3,"regionId":6},{"id":73,"label":"San Juan de Los Morros","name":"San Juan de Los Morros","refClusterStatus":1,"idCluster":3,"regionId":3},{"id":99,"label":"Cumana","name":"Cumana","refClusterStatus":1,"idCluster":3,"regionId":7},{"id":107,"label":"Tucupita","name":"Tucupita","refClusterStatus":0,"idCluster":3,"regionId":8},{"id":67,"label":"Perija","name":"Perija","refClusterStatus":1,"idCluster":3,"regionId":2},{"id":55,"label":"Caracas Sur","name":"Caracas Sur","refClusterStatus":1,"idCluster":3,"regionId":1},{"id":106,"label":"Ciudad Bolivar","name":"Ciudad Bolivar","refClusterStatus":1,"idCluster":2,"regionId":8},{"id":54,"label":"Caracas Centro","name":"Caracas Centro","refClusterStatus":1,"idCluster":2,"regionId":1},{"id":66,"label":"Maracaibo Sur","name":"Maracaibo Sur","refClusterStatus":1,"idCluster":2,"regionId":2},{"id":72,"label":"La Victoria","name":"La Victoria","refClusterStatus":1,"idCluster":2,"regionId":3},{"id":81,"label":"Puerto Cabello","name":"Puerto Cabello","refClusterStatus":1,"idCluster":2,"regionId":4},{"id":85,"label":"Valera","name":"Valera","refClusterStatus":1,"idCluster":2,"regionId":5},{"id":91,"label":"Carora","name":"Carora","refClusterStatus":1,"idCluster":2,"regionId":6},{"id":98,"label":"Porlamar","name":"Porlamar","refClusterStatus":1,"idCluster":2,"regionId":7},{"id":53,"label":"Caracas Norte","name":"Caracas Norte","refClusterStatus":1,"idCluster":1,"regionId":1},{"id":105,"label":"Puerto Ordaz","name":"Puerto Ordaz","refClusterStatus":1,"idCluster":1,"regionId":8},{"id":113,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":1,"regionId":6},{"id":114,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":1,"regionId":7},{"id":115,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":1,"regionId":8},{"id":97,"label":"Puerto La Cruz","name":"Puerto La Cruz","refClusterStatus":1,"idCluster":1,"regionId":7},{"id":90,"label":"Barquisimeto","name":"Barquisimeto","refClusterStatus":1,"idCluster":1,"regionId":6},{"id":84,"label":"San Cristobal","name":"San Cristobal","refClusterStatus":1,"idCluster":1,"regionId":5},{"id":80,"label":"Valencia Norte","name":"Valencia Norte","refClusterStatus":1,"idCluster":1,"regionId":4},{"id":71,"label":"Maracay","name":"Maracay","refClusterStatus":1,"idCluster":1,"regionId":3},{"id":65,"label":"Maracaibo Norte","name":"Maracaibo Norte","refClusterStatus":1,"idCluster":1,"regionId":2},{"id":110,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":1,"regionId":3},{"id":111,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":1,"regionId":4},{"id":112,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":1,"regionId":5},{"id":104,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":0,"regionId":2},{"id":0,"label":"Caracas Norte","name":"Caracas Norte","refClusterStatus":1,"idCluster":0,"regionId":1},{"id":96,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":0,"regionId":1}],"total":72,"page":1,"limit":1000,"hasNext":false,"hasPrev":false,"next":1,"prev":1,"pages":1,"last":1,"first":1},"timestamp":1755645831745}
+
+19:23:51.814 [main] ERROR com.intuit.karate - classpath:api/obtenerRefCluster.feature:53
+* match isValid == true
+match failed: EQUALS
+  $ | not equal (BOOLEAN:BOOLEAN)
+  false
+  true
+
+classpath:api/obtenerRefCluster.feature:53
+19:23:52.469 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 2 of 2 (0 remaining) classpath:api/obtenerRefCluster.feature
+19:26:01.768 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+19:26:01.770 [main] WARN  com.intuit.karate.Suite - failed to backup existing dir: target
+19:26:01.784 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+19:26:03.110 [main] DEBUG com.intuit.karate - request:
+1 > POST http://10.161.169.27:8511/intraLogin
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 39
+1 > Host: 10.161.169.27:8511
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 > Accept-Encoding: gzip,deflate
+{"login":"tns01","clave":"T3st2024.+-"}
+
+19:26:03.255 [main] DEBUG com.intuit.karate - response time in milliseconds: 143
+1 < 200
+1 < Content-Type: application/json
+1 < content-length: 326
+{"token":"eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkFEQkRDNEJDQ0NFNzkyRDQ0NzgwRUZDMzg0QkE4NDY3Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ1OTYzLCJleHAiOjE3NTU2NDk1NjN9.cLxywitJE3YqpnGsUHAvAeFvo1PCyt0CCq_2NNYNuUElvfpRQJFyuzbiY3tttrly"}
+
+19:26:03.561 [main] INFO  com.intuit.karate - [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 0.143 s 
+19:26:03.583 [main] DEBUG com.intuit.karate - request:
+1 > GET http://10.161.169.27:8517/api/v1/estaciones/ref-clusters?limit=1000&page=1
+1 > Content-Type: application/json
+1 > X-USER-ID: E11011
+1 > X-CORRELATION-ID: 1445|E11011|234234
+1 > X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkFEQkRDNEJDQ0NFNzkyRDQ0NzgwRUZDMzg0QkE4NDY3Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ1OTYzLCJleHAiOjE3NTU2NDk1NjN9.cLxywitJE3YqpnGsUHAvAeFvo1PCyt0CCq_2NNYNuUElvfpRQJFyuzbiY3tttrly
+1 > Host: 10.161.169.27:8517
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:26:03.843 [main] DEBUG com.intuit.karate - response time in milliseconds: 260
+1 < 200
+1 < content-length: 7379
+1 < Content-Type: application/json;charset=UTF-8
+{"success":true,"data":{"data":[{"id":123,"label":"Caracas Subterranea","name":"Caracas Subterranea","refClusterStatus":1,"idCluster":13,"regionId":1},{"id":64,"label":"Gran Caracas","name":"Gran Caracas","refClusterStatus":0,"idCluster":12,"regionId":1},{"id":63,"label":"El Junquito","name":"El Junquito","refClusterStatus":1,"idCluster":11,"regionId":1},{"id":62,"label":"Valles del Tuy","name":"Valles del Tuy","refClusterStatus":1,"idCluster":10,"regionId":1},{"id":79,"label":"Centro Llanos","name":"Centro Llanos","refClusterStatus":0,"idCluster":9,"regionId":3},{"id":61,"label":"Higuerote","name":"Higuerote","refClusterStatus":1,"idCluster":9,"regionId":1},{"id":78,"label":"Colonia Tovar","name":"Colonia Tovar","refClusterStatus":0,"idCluster":8,"regionId":3},{"id":60,"label":"Los Teques","name":"Los Teques","refClusterStatus":1,"idCluster":8,"regionId":1},{"id":122,"label":"Guayana Sur","name":"Guayana Sur","refClusterStatus":1,"idCluster":8,"regionId":8},{"id":121,"label":"Paria","name":"Paria","refClusterStatus":1,"idCluster":8,"regionId":7},{"id":103,"label":"Guiria","name":"Guiria","refClusterStatus":0,"idCluster":7,"regionId":7},{"id":120,"label":"San Felix","name":"San Felix","refClusterStatus":1,"idCluster":7,"regionId":8},{"id":59,"label":"Litoral","name":"Litoral","refClusterStatus":1,"idCluster":7,"regionId":1},{"id":116,"label":"Maracaibo Centro","name":"Maracaibo Centro","refClusterStatus":1,"idCluster":7,"regionId":2},{"id":77,"label":"Zaraza","name":"Zaraza","refClusterStatus":0,"idCluster":7,"regionId":3},{"id":118,"label":"Valencia Oeste","name":"Valencia Oeste","refClusterStatus":1,"idCluster":6,"regionId":4},{"id":70,"label":"Punto Fijo","name":"Punto Fijo","refClusterStatus":1,"idCluster":6,"regionId":2},{"id":102,"label":"El Tigre","name":"El Tigre","refClusterStatus":1,"idCluster":6,"regionId":7},{"id":89,"label":"Guasdualito","name":"Guasdualito","refClusterStatus":1,"idCluster":6,"regionId":5},{"id":58,"label":"Guarenas Guatire","name":"Guarenas Guatire","refClusterStatus":1,"idCluster":6,"regionId":1},{"id":95,"label":"Barinas","name":"Barinas","refClusterStatus":1,"idCluster":6,"regionId":6},{"id":119,"label":"Maturin Foranea","name":"Maturin Foranea","refClusterStatus":1,"idCluster":6,"regionId":8},{"id":76,"label":"Valle de La Pascua","name":"Valle de La Pascua","refClusterStatus":1,"idCluster":6,"regionId":3},{"id":109,"label":"Maturin","name":"Maturin","refClusterStatus":1,"idCluster":5,"regionId":8},{"id":117,"label":"Valencia Este","name":"Valencia Este","refClusterStatus":1,"idCluster":5,"regionId":4},{"id":69,"label":"Coro","name":"Coro","refClusterStatus":1,"idCluster":5,"regionId":2},{"id":75,"label":"San Fernando de Apure","name":"San Fernando de Apure","refClusterStatus":1,"idCluster":5,"regionId":3},{"id":57,"label":"Caracas Este","name":"Caracas Este","refClusterStatus":1,"idCluster":5,"regionId":1},{"id":101,"label":"Carupano","name":"Carupano","refClusterStatus":0,"idCluster":5,"regionId":7},{"id":88,"label":"San Telmo","name":"San Telmo","refClusterStatus":0,"idCluster":5,"regionId":5},{"id":94,"label":"San Felipe","name":"San Felipe","refClusterStatus":1,"idCluster":5,"regionId":6},{"id":56,"label":"Caracas Oeste","name":"Caracas Oeste","refClusterStatus":1,"idCluster":4,"regionId":1},{"id":108,"label":"Sta. Elena de Uairen","name":"Sta. Elena de Uairen","refClusterStatus":0,"idCluster":4,"regionId":8},{"id":100,"label":"Anaco","name":"Anaco","refClusterStatus":1,"idCluster":4,"regionId":7},{"id":74,"label":"Calabozo","name":"Calabozo","refClusterStatus":1,"idCluster":4,"regionId":3},{"id":68,"label":"COL","name":"COL","refClusterStatus":1,"idCluster":4,"regionId":2},{"id":83,"label":"Centro","name":"Centro","refClusterStatus":0,"idCluster":4,"regionId":4},{"id":87,"label":"El Vigia","name":"El Vigia","refClusterStatus":1,"idCluster":4,"regionId":5},{"id":93,"label":"Guanare","name":"Guanare","refClusterStatus":1,"idCluster":4,"regionId":6},{"id":86,"label":"Merida","name":"Merida","refClusterStatus":1,"idCluster":3,"regionId":5},{"id":82,"label":"San Carlos","name":"San Carlos","refClusterStatus":1,"idCluster":3,"regionId":4},{"id":92,"label":"Acarigua","name":"Acarigua","refClusterStatus":1,"idCluster":3,"regionId":6},{"id":73,"label":"San Juan de Los Morros","name":"San Juan de Los Morros","refClusterStatus":1,"idCluster":3,"regionId":3},{"id":99,"label":"Cumana","name":"Cumana","refClusterStatus":1,"idCluster":3,"regionId":7},{"id":107,"label":"Tucupita","name":"Tucupita","refClusterStatus":0,"idCluster":3,"regionId":8},{"id":67,"label":"Perija","name":"Perija","refClusterStatus":1,"idCluster":3,"regionId":2},{"id":55,"label":"Caracas Sur","name":"Caracas Sur","refClusterStatus":1,"idCluster":3,"regionId":1},{"id":106,"label":"Ciudad Bolivar","name":"Ciudad Bolivar","refClusterStatus":1,"idCluster":2,"regionId":8},{"id":54,"label":"Caracas Centro","name":"Caracas Centro","refClusterStatus":1,"idCluster":2,"regionId":1},{"id":66,"label":"Maracaibo Sur","name":"Maracaibo Sur","refClusterStatus":1,"idCluster":2,"regionId":2},{"id":72,"label":"La Victoria","name":"La Victoria","refClusterStatus":1,"idCluster":2,"regionId":3},{"id":81,"label":"Puerto Cabello","name":"Puerto Cabello","refClusterStatus":1,"idCluster":2,"regionId":4},{"id":85,"label":"Valera","name":"Valera","refClusterStatus":1,"idCluster":2,"regionId":5},{"id":91,"label":"Carora","name":"Carora","refClusterStatus":1,"idCluster":2,"regionId":6},{"id":98,"label":"Porlamar","name":"Porlamar","refClusterStatus":1,"idCluster":2,"regionId":7},{"id":53,"label":"Caracas Norte","name":"Caracas Norte","refClusterStatus":1,"idCluster":1,"regionId":1},{"id":105,"label":"Puerto Ordaz","name":"Puerto Ordaz","refClusterStatus":1,"idCluster":1,"regionId":8},{"id":113,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":1,"regionId":6},{"id":114,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":1,"regionId":7},{"id":115,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":1,"regionId":8},{"id":97,"label":"Puerto La Cruz","name":"Puerto La Cruz","refClusterStatus":1,"idCluster":1,"regionId":7},{"id":90,"label":"Barquisimeto","name":"Barquisimeto","refClusterStatus":1,"idCluster":1,"regionId":6},{"id":84,"label":"San Cristobal","name":"San Cristobal","refClusterStatus":1,"idCluster":1,"regionId":5},{"id":80,"label":"Valencia Norte","name":"Valencia Norte","refClusterStatus":1,"idCluster":1,"regionId":4},{"id":71,"label":"Maracay","name":"Maracay","refClusterStatus":1,"idCluster":1,"regionId":3},{"id":65,"label":"Maracaibo Norte","name":"Maracaibo Norte","refClusterStatus":1,"idCluster":1,"regionId":2},{"id":110,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":1,"regionId":3},{"id":111,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":1,"regionId":4},{"id":112,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":1,"regionId":5},{"id":104,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":0,"regionId":2},{"id":0,"label":"Caracas Norte","name":"Caracas Norte","refClusterStatus":1,"idCluster":0,"regionId":1},{"id":96,"label":"Default","name":"Default","refClusterStatus":1,"idCluster":0,"regionId":1}],"total":72,"page":1,"limit":1000,"hasNext":false,"hasPrev":false,"next":1,"prev":1,"pages":1,"last":1,"first":1},"timestamp":1755645963810}
+
+19:26:03.918 [main] INFO  com.intuit.karate - [print] Consulta sin filtros exitosa: {
+  "success": true,
+  "data": {
+    "data": [
+      {
+        "id": 123,
+        "label": "Caracas Subterranea",
+        "name": "Caracas Subterranea",
+        "refClusterStatus": 1,
+        "idCluster": 13,
+        "regionId": 1
+      },
+      {
+        "id": 64,
+        "label": "Gran Caracas",
+        "name": "Gran Caracas",
+        "refClusterStatus": 0,
+        "idCluster": 12,
+        "regionId": 1
+      },
+      {
+        "id": 63,
+        "label": "El Junquito",
+        "name": "El Junquito",
+        "refClusterStatus": 1,
+        "idCluster": 11,
+        "regionId": 1
+      },
+      {
+        "id": 62,
+        "label": "Valles del Tuy",
+        "name": "Valles del Tuy",
+        "refClusterStatus": 1,
+        "idCluster": 10,
+        "regionId": 1
+      },
+      {
+        "id": 79,
+        "label": "Centro Llanos",
+        "name": "Centro Llanos",
+        "refClusterStatus": 0,
+        "idCluster": 9,
+        "regionId": 3
+      },
+      {
+        "id": 61,
+        "label": "Higuerote",
+        "name": "Higuerote",
+        "refClusterStatus": 1,
+        "idCluster": 9,
+        "regionId": 1
+      },
+      {
+        "id": 78,
+        "label": "Colonia Tovar",
+        "name": "Colonia Tovar",
+        "refClusterStatus": 0,
+        "idCluster": 8,
+        "regionId": 3
+      },
+      {
+        "id": 60,
+        "label": "Los Teques",
+        "name": "Los Teques",
+        "refClusterStatus": 1,
+        "idCluster": 8,
+        "regionId": 1
+      },
+      {
+        "id": 122,
+        "label": "Guayana Sur",
+        "name": "Guayana Sur",
+        "refClusterStatus": 1,
+        "idCluster": 8,
+        "regionId": 8
+      },
+      {
+        "id": 121,
+        "label": "Paria",
+        "name": "Paria",
+        "refClusterStatus": 1,
+        "idCluster": 8,
+        "regionId": 7
+      },
+      {
+        "id": 103,
+        "label": "Guiria",
+        "name": "Guiria",
+        "refClusterStatus": 0,
+        "idCluster": 7,
+        "regionId": 7
+      },
+      {
+        "id": 120,
+        "label": "San Felix",
+        "name": "San Felix",
+        "refClusterStatus": 1,
+        "idCluster": 7,
+        "regionId": 8
+      },
+      {
+        "id": 59,
+        "label": "Litoral",
+        "name": "Litoral",
+        "refClusterStatus": 1,
+        "idCluster": 7,
+        "regionId": 1
+      },
+      {
+        "id": 116,
+        "label": "Maracaibo Centro",
+        "name": "Maracaibo Centro",
+        "refClusterStatus": 1,
+        "idCluster": 7,
+        "regionId": 2
+      },
+      {
+        "id": 77,
+        "label": "Zaraza",
+        "name": "Zaraza",
+        "refClusterStatus": 0,
+        "idCluster": 7,
+        "regionId": 3
+      },
+      {
+        "id": 118,
+        "label": "Valencia Oeste",
+        "name": "Valencia Oeste",
+        "refClusterStatus": 1,
+        "idCluster": 6,
+        "regionId": 4
+      },
+      {
+        "id": 70,
+        "label": "Punto Fijo",
+        "name": "Punto Fijo",
+        "refClusterStatus": 1,
+        "idCluster": 6,
+        "regionId": 2
+      },
+      {
+        "id": 102,
+        "label": "El Tigre",
+        "name": "El Tigre",
+        "refClusterStatus": 1,
+        "idCluster": 6,
+        "regionId": 7
+      },
+      {
+        "id": 89,
+        "label": "Guasdualito",
+        "name": "Guasdualito",
+        "refClusterStatus": 1,
+        "idCluster": 6,
+        "regionId": 5
+      },
+      {
+        "id": 58,
+        "label": "Guarenas Guatire",
+        "name": "Guarenas Guatire",
+        "refClusterStatus": 1,
+        "idCluster": 6,
+        "regionId": 1
+      },
+      {
+        "id": 95,
+        "label": "Barinas",
+        "name": "Barinas",
+        "refClusterStatus": 1,
+        "idCluster": 6,
+        "regionId": 6
+      },
+      {
+        "id": 119,
+        "label": "Maturin Foranea",
+        "name": "Maturin Foranea",
+        "refClusterStatus": 1,
+        "idCluster": 6,
+        "regionId": 8
+      },
+      {
+        "id": 76,
+        "label": "Valle de La Pascua",
+        "name": "Valle de La Pascua",
+        "refClusterStatus": 1,
+        "idCluster": 6,
+        "regionId": 3
+      },
+      {
+        "id": 109,
+        "label": "Maturin",
+        "name": "Maturin",
+        "refClusterStatus": 1,
+        "idCluster": 5,
+        "regionId": 8
+      },
+      {
+        "id": 117,
+        "label": "Valencia Este",
+        "name": "Valencia Este",
+        "refClusterStatus": 1,
+        "idCluster": 5,
+        "regionId": 4
+      },
+      {
+        "id": 69,
+        "label": "Coro",
+        "name": "Coro",
+        "refClusterStatus": 1,
+        "idCluster": 5,
+        "regionId": 2
+      },
+      {
+        "id": 75,
+        "label": "San Fernando de Apure",
+        "name": "San Fernando de Apure",
+        "refClusterStatus": 1,
+        "idCluster": 5,
+        "regionId": 3
+      },
+      {
+        "id": 57,
+        "label": "Caracas Este",
+        "name": "Caracas Este",
+        "refClusterStatus": 1,
+        "idCluster": 5,
+        "regionId": 1
+      },
+      {
+        "id": 101,
+        "label": "Carupano",
+        "name": "Carupano",
+        "refClusterStatus": 0,
+        "idCluster": 5,
+        "regionId": 7
+      },
+      {
+        "id": 88,
+        "label": "San Telmo",
+        "name": "San Telmo",
+        "refClusterStatus": 0,
+        "idCluster": 5,
+        "regionId": 5
+      },
+      {
+        "id": 94,
+        "label": "San Felipe",
+        "name": "San Felipe",
+        "refClusterStatus": 1,
+        "idCluster": 5,
+        "regionId": 6
+      },
+      {
+        "id": 56,
+        "label": "Caracas Oeste",
+        "name": "Caracas Oeste",
+        "refClusterStatus": 1,
+        "idCluster": 4,
+        "regionId": 1
+      },
+      {
+        "id": 108,
+        "label": "Sta. Elena de Uairen",
+        "name": "Sta. Elena de Uairen",
+        "refClusterStatus": 0,
+        "idCluster": 4,
+        "regionId": 8
+      },
+      {
+        "id": 100,
+        "label": "Anaco",
+        "name": "Anaco",
+        "refClusterStatus": 1,
+        "idCluster": 4,
+        "regionId": 7
+      },
+      {
+        "id": 74,
+        "label": "Calabozo",
+        "name": "Calabozo",
+        "refClusterStatus": 1,
+        "idCluster": 4,
+        "regionId": 3
+      },
+      {
+        "id": 68,
+        "label": "COL",
+        "name": "COL",
+        "refClusterStatus": 1,
+        "idCluster": 4,
+        "regionId": 2
+      },
+      {
+        "id": 83,
+        "label": "Centro",
+        "name": "Centro",
+        "refClusterStatus": 0,
+        "idCluster": 4,
+        "regionId": 4
+      },
+      {
+        "id": 87,
+        "label": "El Vigia",
+        "name": "El Vigia",
+        "refClusterStatus": 1,
+        "idCluster": 4,
+        "regionId": 5
+      },
+      {
+        "id": 93,
+        "label": "Guanare",
+        "name": "Guanare",
+        "refClusterStatus": 1,
+        "idCluster": 4,
+        "regionId": 6
+      },
+      {
+        "id": 86,
+        "label": "Merida",
+        "name": "Merida",
+        "refClusterStatus": 1,
+        "idCluster": 3,
+        "regionId": 5
+      },
+      {
+        "id": 82,
+        "label": "San Carlos",
+        "name": "San Carlos",
+        "refClusterStatus": 1,
+        "idCluster": 3,
+        "regionId": 4
+      },
+      {
+        "id": 92,
+        "label": "Acarigua",
+        "name": "Acarigua",
+        "refClusterStatus": 1,
+        "idCluster": 3,
+        "regionId": 6
+      },
+      {
+        "id": 73,
+        "label": "San Juan de Los Morros",
+        "name": "San Juan de Los Morros",
+        "refClusterStatus": 1,
+        "idCluster": 3,
+        "regionId": 3
+      },
+      {
+        "id": 99,
+        "label": "Cumana",
+        "name": "Cumana",
+        "refClusterStatus": 1,
+        "idCluster": 3,
+        "regionId": 7
+      },
+      {
+        "id": 107,
+        "label": "Tucupita",
+        "name": "Tucupita",
+        "refClusterStatus": 0,
+        "idCluster": 3,
+        "regionId": 8
+      },
+      {
+        "id": 67,
+        "label": "Perija",
+        "name": "Perija",
+        "refClusterStatus": 1,
+        "idCluster": 3,
+        "regionId": 2
+      },
+      {
+        "id": 55,
+        "label": "Caracas Sur",
+        "name": "Caracas Sur",
+        "refClusterStatus": 1,
+        "idCluster": 3,
+        "regionId": 1
+      },
+      {
+        "id": 106,
+        "label": "Ciudad Bolivar",
+        "name": "Ciudad Bolivar",
+        "refClusterStatus": 1,
+        "idCluster": 2,
+        "regionId": 8
+      },
+      {
+        "id": 54,
+        "label": "Caracas Centro",
+        "name": "Caracas Centro",
+        "refClusterStatus": 1,
+        "idCluster": 2,
+        "regionId": 1
+      },
+      {
+        "id": 66,
+        "label": "Maracaibo Sur",
+        "name": "Maracaibo Sur",
+        "refClusterStatus": 1,
+        "idCluster": 2,
+        "regionId": 2
+      },
+      {
+        "id": 72,
+        "label": "La Victoria",
+        "name": "La Victoria",
+        "refClusterStatus": 1,
+        "idCluster": 2,
+        "regionId": 3
+      },
+      {
+        "id": 81,
+        "label": "Puerto Cabello",
+        "name": "Puerto Cabello",
+        "refClusterStatus": 1,
+        "idCluster": 2,
+        "regionId": 4
+      },
+      {
+        "id": 85,
+        "label": "Valera",
+        "name": "Valera",
+        "refClusterStatus": 1,
+        "idCluster": 2,
+        "regionId": 5
+      },
+      {
+        "id": 91,
+        "label": "Carora",
+        "name": "Carora",
+        "refClusterStatus": 1,
+        "idCluster": 2,
+        "regionId": 6
+      },
+      {
+        "id": 98,
+        "label": "Porlamar",
+        "name": "Porlamar",
+        "refClusterStatus": 1,
+        "idCluster": 2,
+        "regionId": 7
+      },
+      {
+        "id": 53,
+        "label": "Caracas Norte",
+        "name": "Caracas Norte",
+        "refClusterStatus": 1,
+        "idCluster": 1,
+        "regionId": 1
+      },
+      {
+        "id": 105,
+        "label": "Puerto Ordaz",
+        "name": "Puerto Ordaz",
+        "refClusterStatus": 1,
+        "idCluster": 1,
+        "regionId": 8
+      },
+      {
+        "id": 113,
+        "label": "Default",
+        "name": "Default",
+        "refClusterStatus": 1,
+        "idCluster": 1,
+        "regionId": 6
+      },
+      {
+        "id": 114,
+        "label": "Default",
+        "name": "Default",
+        "refClusterStatus": 1,
+        "idCluster": 1,
+        "regionId": 7
+      },
+      {
+        "id": 115,
+        "label": "Default",
+        "name": "Default",
+        "refClusterStatus": 1,
+        "idCluster": 1,
+        "regionId": 8
+      },
+      {
+        "id": 97,
+        "label": "Puerto La Cruz",
+        "name": "Puerto La Cruz",
+        "refClusterStatus": 1,
+        "idCluster": 1,
+        "regionId": 7
+      },
+      {
+        "id": 90,
+        "label": "Barquisimeto",
+        "name": "Barquisimeto",
+        "refClusterStatus": 1,
+        "idCluster": 1,
+        "regionId": 6
+      },
+      {
+        "id": 84,
+        "label": "San Cristobal",
+        "name": "San Cristobal",
+        "refClusterStatus": 1,
+        "idCluster": 1,
+        "regionId": 5
+      },
+      {
+        "id": 80,
+        "label": "Valencia Norte",
+        "name": "Valencia Norte",
+        "refClusterStatus": 1,
+        "idCluster": 1,
+        "regionId": 4
+      },
+      {
+        "id": 71,
+        "label": "Maracay",
+        "name": "Maracay",
+        "refClusterStatus": 1,
+        "idCluster": 1,
+        "regionId": 3
+      },
+      {
+        "id": 65,
+        "label": "Maracaibo Norte",
+        "name": "Maracaibo Norte",
+        "refClusterStatus": 1,
+        "idCluster": 1,
+        "regionId": 2
+      },
+      {
+        "id": 110,
+        "label": "Default",
+        "name": "Default",
+        "refClusterStatus": 1,
+        "idCluster": 1,
+        "regionId": 3
+      },
+      {
+        "id": 111,
+        "label": "Default",
+        "name": "Default",
+        "refClusterStatus": 1,
+        "idCluster": 1,
+        "regionId": 4
+      },
+      {
+        "id": 112,
+        "label": "Default",
+        "name": "Default",
+        "refClusterStatus": 1,
+        "idCluster": 1,
+        "regionId": 5
+      },
+      {
+        "id": 104,
+        "label": "Default",
+        "name": "Default",
+        "refClusterStatus": 1,
+        "idCluster": 0,
+        "regionId": 2
+      },
+      {
+        "id": 0,
+        "label": "Caracas Norte",
+        "name": "Caracas Norte",
+        "refClusterStatus": 1,
+        "idCluster": 0,
+        "regionId": 1
+      },
+      {
+        "id": 96,
+        "label": "Default",
+        "name": "Default",
+        "refClusterStatus": 1,
+        "idCluster": 0,
+        "regionId": 1
+      }
+    ],
+    "total": 72,
+    "page": 1,
+    "limit": 1000,
+    "hasNext": false,
+    "hasPrev": false,
+    "next": 1,
+    "prev": 1,
+    "pages": 1,
+    "last": 1,
+    "first": 1
+  },
+  "timestamp": 1755645963810
+}
+ 
+19:26:03.923 [main] INFO  com.intuit.karate - [print] === TIEMPO DE RESPUESTA === 0.26 s 
+19:26:04.596 [main] INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 2 (0 remaining) classpath:api/obtenerRefCluster.feature
+19:28:26.281 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+19:28:26.285 [main] WARN  com.intuit.karate.Suite - failed to backup existing dir: target
+19:28:26.293 [main] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
+19:28:27.699 [main] DEBUG com.intuit.karate - request:
+1 > POST http://10.161.169.27:8511/intraLogin
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 39
+1 > Host: 10.161.169.27:8511
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 > Accept-Encoding: gzip,deflate
+{"login":"tns01","clave":"T3st2024.+-"}
+
+19:28:27.835 [main] DEBUG com.intuit.karate - response time in milliseconds: 136
+1 < 200
+1 < Content-Type: application/json
+1 < content-length: 326
+{"token":"eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkNGQzc5OTIwOTUxQTY2MkE5NUNBRDA4MTNGM0U1MDI1Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ2MTA3LCJleHAiOjE3NTU2NDk3MDd9.cNpNA9F0RV5B38bAM4IKH-lkyJ_O9zAnrkRxbfcJZgV4WqxKlTTKS5nasP2rC_Cm"}
+
+19:28:28.171 [main] INFO  com.intuit.karate - [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 0.136 s 
+19:28:28.198 [main] DEBUG com.intuit.karate - request:
+1 > GET http://10.161.169.27:8517/api/v1/estaciones/ref-clusters?limit=1000&page=1&name=string&label=string&refClusterStatus=0&regionId=0&idCluster=1
+1 > Content-Type: application/json
+1 > X-USER-ID: E11011
+1 > X-CORRELATION-ID: 1445|E11011|234234
+1 > X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkNGQzc5OTIwOTUxQTY2MkE5NUNBRDA4MTNGM0U1MDI1Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ2MTA3LCJleHAiOjE3NTU2NDk3MDd9.cNpNA9F0RV5B38bAM4IKH-lkyJ_O9zAnrkRxbfcJZgV4WqxKlTTKS5nasP2rC_Cm
+1 > Host: 10.161.169.27:8517
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 > Accept-Encoding: gzip,deflate
+
+
+19:28:30.972 [main] DEBUG com.intuit.karate - response time in milliseconds: 2774
+1 < 200
+1 < content-length: 172
+1 < Content-Type: application/json;charset=UTF-8
+{"success":true,"data":{"data":[],"total":0,"page":1,"limit":1000,"hasNext":false,"hasPrev":false,"next":1,"prev":1,"pages":0,"last":0,"first":1},"timestamp":1755646110939}
+
+19:28:30.980 [main] ERROR com.intuit.karate - classpath:api/obtenerRefCluster.feature:33
+And match response.data.data[0].name == 'string'
+match failed: EQUALS
+  $ | actual path does not exist (STRING:STRING)
+  '#notpresent'
+  'string'
+
+classpath:api/obtenerRefCluster.feature:33
+19:28:31.833 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 2 of 2 (0 remaining) classpath:api/obtenerRefCluster.feature

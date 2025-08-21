@@ -26,7 +26,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 });
 </script>
 
-    <title>api.obtenerLog</title>
+    <title>api.obtenerRefCluster</title>
   </head>
   <body>
     <div id="root-container">
@@ -38,8 +38,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">1</div>
-      <div id="nav-fail" class="bg-danger">0</div>
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
     </div>
   </div>
   <div id="nav-env">
@@ -49,13 +49,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2025-08-19 01:19:10 p. m.</div>
+    <div>2025-08-19 07:28:30 p. m.</div>
   </div>
 </div>
 
         <div class="nav-container">
-          <div class="nav-item passed">
-            <a href="#[1:21]"><span>[1:21]</span> <span>Obtener logs de estaciones con parámetros válidos</span></a>
+          <div class="nav-item failed">
+            <a href="#[1:21]"><span>[1:21]</span> <span>Consultar Ref Clusters con parámetros válidos</span></a>
           </div>
         </div>
       </div>
@@ -64,24 +64,24 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
           <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
           <span class="feature-label">Feature:</span>
-          <span class="feature-path">api/obtenerLog.feature</span><span class="feature-label">|</span>
-          <span class="feature-name">Obtener logs de estaciones mediante el endpoint GET /api/v1/estaciones/log-estaciones</span>
+          <span class="feature-path">api/obtenerRefCluster.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Consultar Ref Clusters mediante el endpoint GET /estaciones/ref-cluster</span>
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
           <div class="scenario-heading" id="[1:21]">
             <div class="heading-container">
               <div class="scenario-tags">
-                <a class="badge badge-primary" href="karate-tags.html">obtenerLogEstaciones</a><a class="badge badge-primary" href="karate-tags.html">obtenerLog</a>
+                <a class="badge badge-primary" href="karate-tags.html">obtenerRefCluster</a><a class="badge badge-primary" href="karate-tags.html">refClustersConFiltro</a>
               </div>
               <div class="scenario-keyword">
                 Scenario: <span>[1:21]</span>
-                <span class="scenario-name">Obtener logs de estaciones con parámetros válidos</span>
+                <span class="scenario-name">Consultar Ref Clusters con parámetros válidos</span>
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>1055</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>3649</span>
             </div>
           </div>
           <div class="step-row">
@@ -98,7 +98,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># 1. LOGIN PARA OBTENER TOKEN</div>
+      <div class="step-cell comment"># 1. LLAMANDO AL SERVICIO AUTHTOKEN PARA HACER LOGIN Y OBTENER EL TOKEN</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -108,10 +108,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">6</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def loginBody = read(&#39;classpath:JsonRequest/loginTokenRequest.json&#39;)</span>
+        <span>*</span>&nbsp;<span>configure logPrettyResponse = false</span>
       </div>
     </div>
-    <div class="time-cell passed">40</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -136,10 +136,66 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">7</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def loginResponse = call read(&#39;classpath:api/loginToken.feature&#39;) { request: loginBody }</span>
+        <span>*</span>&nbsp;<span>configure logPrettyRequest = false</span>
       </div>
     </div>
-    <div class="time-cell passed">823</div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:21]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def validBodyRequest = read(&#39;classpath:JsonRequest/loginTokenRequest.json&#39;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">36</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:21]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref bg-step">9</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def loginResponse = call read(&#39;classpath:api/loginToken.feature&#39;) { request: validBodyRequest }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">816</div>
   </div>
 
    
@@ -153,12 +209,12 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   <div>
         
     <div class="step-row">
-      <div class="step-container" id="0.7.0.call">
+      <div class="step-container" id="0.9.0.call">
         <div class="step-ref bg-step">&gt;&gt;</div>
         <div class="step-indent"></div>
         <div class="step-cell passed">api.loginToken</div>
       </div>
-      <div class="time-cell passed">810</div>
+      <div class="time-cell passed">800</div>
     </div>
     <div>
       <div><div>
@@ -166,15 +222,15 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.5">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.5">
       <div class="step-ref bg-step">5</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>configure logPrettyResponse = false</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -194,8 +250,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.6">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.6">
       <div class="step-ref bg-step">6</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
@@ -222,15 +278,15 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.7">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.7">
       <div class="step-ref bg-step">7</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>url loginUrl</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -250,15 +306,15 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.8">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.8">
       <div class="step-ref bg-step">8</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def schemaUtil = Java.type(&#39;util.JsonSchemaUtil&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">7</div>
+    <div class="time-cell passed">5</div>
   </div>
 
    
@@ -278,8 +334,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.9">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.9">
       <div class="step-ref bg-step">9</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
@@ -306,8 +362,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.10">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.10">
       <div class="step-ref bg-step">10</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
@@ -334,15 +390,15 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.13">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.13">
       <div class="step-ref bg-step">13</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>request validBodyRequest</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -362,15 +418,15 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.14">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.14">
       <div class="step-ref bg-step">14</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method POST</span>
       </div>
     </div>
-    <div class="time-cell passed">475</div>
+    <div class="time-cell passed">454</div>
   </div>
 
    
@@ -379,21 +435,21 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.7.0.call.0.14">13:19:10.244 request:
+  <div class="preformatted" data-parent="0.9.0.call.0.14">19:28:27.699 request:
 1 &gt; POST http://10.161.169.27:8511/intraLogin
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 39
 1 &gt; Host: 10.161.169.27:8511
 1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;login&quot;:&quot;tns01&quot;,&quot;clave&quot;:&quot;T3st2024.+-&quot;}
 
-13:19:10.384 response time in milliseconds: 138
+19:28:27.835 response time in milliseconds: 136
 1 &lt; 200
 1 &lt; Content-Type: application/json
 1 &lt; content-length: 326
-{&quot;token&quot;:&quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjkwNzFFMDU0QzZEMEUyQzExRTI3NUIzQjlFM0JEMjRFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjIzOTUwLCJleHAiOjE3NTU2Mjc1NTB9.9PIHV9ZReFKICuSptK7VlZca6mvaYwZRKLqyDR8qlFu9-yL0_p7likwFYvgCo_k2&quot;}
+{&quot;token&quot;:&quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkNGQzc5OTIwOTUxQTY2MkE5NUNBRDA4MTNGM0U1MDI1Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ2MTA3LCJleHAiOjE3NTU2NDk3MDd9.cNpNA9F0RV5B38bAM4IKH-lkyJ_O9zAnrkRxbfcJZgV4WqxKlTTKS5nasP2rC_Cm&quot;}
 
 </div>   
 
@@ -406,15 +462,15 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.15">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.15">
       <div class="step-ref bg-step">15</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">9</div>
   </div>
 
    
@@ -432,7 +488,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div><div>
   
 
-  <div class="step-row" data-parent="0.7.0.call">
+  <div class="step-row" data-parent="0.9.0.call">
     <div class="step-container">
       <div class="step-ref passed"></div>
       <div class="step-indent"></div>
@@ -441,15 +497,15 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div class="time-cell comment"></div>            
   </div>
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.18">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.18">
       <div class="step-ref bg-step">18</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>match response.token == &#39;#string&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">12</div>
+    <div class="time-cell passed">23</div>
   </div>
 
    
@@ -467,7 +523,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div><div>
   
 
-  <div class="step-row" data-parent="0.7.0.call">
+  <div class="step-row" data-parent="0.9.0.call">
     <div class="step-container">
       <div class="step-ref passed"></div>
       <div class="step-indent"></div>
@@ -476,15 +532,15 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div class="time-cell comment"></div>            
   </div>
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.21">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.21">
       <div class="step-ref bg-step">21</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def responseText = karate.pretty(response)</span>
       </div>
     </div>
-    <div class="time-cell passed">19</div>
+    <div class="time-cell passed">29</div>
   </div>
 
    
@@ -504,15 +560,15 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.22">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.22">
       <div class="step-ref bg-step">22</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def isValid = schemaUtil.isValid(schemaText, responseText)</span>
       </div>
     </div>
-    <div class="time-cell passed">280</div>
+    <div class="time-cell passed">263</div>
   </div>
 
    
@@ -532,8 +588,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.23">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.23">
       <div class="step-ref bg-step">23</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
@@ -558,7 +614,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div><div>
   
 
-  <div class="step-row" data-parent="0.7.0.call">
+  <div class="step-row" data-parent="0.9.0.call">
     <div class="step-container">
       <div class="step-ref passed"></div>
       <div class="step-indent"></div>
@@ -567,15 +623,15 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div class="time-cell comment"></div>            
   </div>
 
-  <div class="step-row" data-parent="0.7.0.call">
-    <div class="step-container" id="0.7.0.call.0.26">
+  <div class="step-row" data-parent="0.9.0.call">
+    <div class="step-container" id="0.9.0.call.0.26">
       <div class="step-ref bg-step">26</div>
       <div class="step-indent"></div>
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>print &#39;=== TIEMPO DE RESPUESTA DEL FEATURE loginToken ===&#39;, responseTime / 1000, &#39;s&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">9</div>
+    <div class="time-cell passed">11</div>
   </div>
 
    
@@ -584,7 +640,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.7.0.call.0.26">13:19:10.707 [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 0.138 s 
+  <div class="preformatted" data-parent="0.9.0.call.0.26">19:28:28.171 [print] === TIEMPO DE RESPUESTA DEL FEATURE loginToken === 0.136 s 
 </div>   
 
   
@@ -602,8 +658,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.8">
-      <div class="step-ref bg-step">8</div>
+    <div class="step-container" id="0.10">
+      <div class="step-ref bg-step">10</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def authToken = loginResponse.response.token</span>
@@ -631,20 +687,20 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># 2. CONFIGURANDO HEADERS</div>
+      <div class="step-cell comment"># 2. USANDO LA FUNCIÓN DE HEADERS DEFINIDA EN karate-config.js</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.11">
-      <div class="step-ref bg-step">11</div>
+    <div class="step-container" id="0.13">
+      <div class="step-ref bg-step">13</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def headers = headersEstacionesConToken(authToken)</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">4</div>
   </div>
 
    
@@ -665,8 +721,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.12">
-      <div class="step-ref bg-step">12</div>
+    <div class="step-container" id="0.14">
+      <div class="step-ref bg-step">14</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>configure headers = headers</span>
@@ -690,75 +746,11 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <div data-parent="[1:21]bg"><div>
   
 
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref bg-step">13</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print &#39;HEADERS usados:&#39;, headers</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.13">13:19:10.713 [print] HEADERS usados: {
-  &quot;Content-Type&quot;: &quot;application/json&quot;,
-  &quot;X-USER-ID&quot;: &quot;E11011&quot;,
-  &quot;X-CORRELATION-ID&quot;: &quot;1445|E11011|234234&quot;,
-  &quot;X-TOKEN-ID&quot;: &quot;eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjkwNzFFMDU0QzZEMEUyQzExRTI3NUIzQjlFM0JEMjRFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjIzOTUwLCJleHAiOjE3NTU2Mjc1NTB9.9PIHV9ZReFKICuSptK7VlZca6mvaYwZRKLqyDR8qlFu9-yL0_p7likwFYvgCo_k2&quot;
-}
- 
-</div>   
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:21]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.14">
-      <div class="step-ref bg-step">14</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print &#39;TOKEN obtenido:&#39;, authToken</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.14">13:19:10.713 [print] TOKEN obtenido: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjkwNzFFMDU0QzZEMEUyQzExRTI3NUIzQjlFM0JEMjRFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjIzOTUwLCJleHAiOjE3NTU2Mjc1NTB9.9PIHV9ZReFKICuSptK7VlZca6mvaYwZRKLqyDR8qlFu9-yL0_p7likwFYvgCo_k2 
-</div>   
-
-  
-
-</div>
-</div>
-          <div data-parent="[1:21]bg"><div>
-  
-
   <div class="step-row">
     <div class="step-container">
       <div class="step-ref passed"></div>
       
-      <div class="step-cell comment"># 3. CONFIGURANDO VALIDACION DE SCHEMA</div>
+      <div class="step-cell comment"># 3. CONFIGURANDO VALIDACIÓN DE SCHEMA</div>
     </div>
     <div class="time-cell comment"></div>            
   </div>
@@ -796,7 +788,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref bg-step">18</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def errorSchema = karate.readAsString(&#39;classpath:Schema/sc_errorResponse.json&#39;)</span>
+        <span>*</span>&nbsp;<span>def schemaText = karate.readAsString(&#39;classpath:Schema/sc_obtenerRefCluster.json&#39;)</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -852,10 +844,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">23</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param correlationId = &#39;1445|E11011|234234&#39;</span>
+        <span>And</span>&nbsp;<span>param limit = 1000</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -880,7 +872,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">24</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param createdStartDate = &#39;2025-08-01T08:00:00&#39;</span>
+        <span>And</span>&nbsp;<span>param page = 1</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -908,7 +900,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">25</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param createdEndDate = &#39;2025-08-19T13:00:00&#39;</span>
+        <span>And</span>&nbsp;<span>param name = &#39;string&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -936,10 +928,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">26</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param limit = 10</span>
+        <span>And</span>&nbsp;<span>param label = &#39;string&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -964,7 +956,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">27</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>param page = 1</span>
+        <span>And</span>&nbsp;<span>param refClusterStatus = 0</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -992,10 +984,10 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">28</div>
       
       <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method GET</span>
+        <span>And</span>&nbsp;<span>param regionId = 0</span>
       </div>
     </div>
-    <div class="time-cell passed">177</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -1004,25 +996,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.28">13:19:10.721 request:
-1 &gt; GET http://10.161.169.27:8517/api/v1/estaciones/log-estaciones?correlationId=1445%7CE11011%7C234234&amp;createdStartDate=2025-08-01T08%3A00%3A00&amp;createdEndDate=2025-08-19T13%3A00%3A00&amp;limit=10&amp;page=1
-1 &gt; Content-Type: application/json
-1 &gt; X-USER-ID: E11011
-1 &gt; X-CORRELATION-ID: 1445|E11011|234234
-1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IjkwNzFFMDU0QzZEMEUyQzExRTI3NUIzQjlFM0JEMjRFIiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjIzOTUwLCJleHAiOjE3NTU2Mjc1NTB9.9PIHV9ZReFKICuSptK7VlZca6mvaYwZRKLqyDR8qlFu9-yL0_p7likwFYvgCo_k2
-1 &gt; Host: 10.161.169.27:8517
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.12)
-1 &gt; Accept-Encoding: gzip,deflate
-
-
-13:19:10.896 response time in milliseconds: 175
-1 &lt; 200
-1 &lt; content-length: 170
-1 &lt; Content-Type: application/json;charset=UTF-8
-{&quot;success&quot;:true,&quot;data&quot;:{&quot;data&quot;:[],&quot;total&quot;:0,&quot;page&quot;:1,&quot;limit&quot;:10,&quot;hasNext&quot;:false,&quot;hasPrev&quot;:false,&quot;next&quot;:1,&quot;prev&quot;:1,&quot;pages&quot;:0,&quot;last&quot;:0,&quot;first&quot;:1},&quot;timestamp&quot;:1755623950877}
-
-</div>   
+     
 
   
 
@@ -1038,7 +1012,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">29</div>
       
       <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
+        <span>And</span>&nbsp;<span>param idCluster = 1</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -1066,7 +1040,53 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <div class="step-ref passed">30</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>match response.success == true</span>
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2781</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.30">19:28:28.198 request:
+1 &gt; GET http://10.161.169.27:8517/api/v1/estaciones/ref-clusters?limit=1000&amp;page=1&amp;name=string&amp;label=string&amp;refClusterStatus=0&amp;regionId=0&amp;idCluster=1
+1 &gt; Content-Type: application/json
+1 &gt; X-USER-ID: E11011
+1 &gt; X-CORRELATION-ID: 1445|E11011|234234
+1 &gt; X-TOKEN-ID: eyJhbGciOiJIUzM4NCJ9.eyJjb2RFbXBsb3llZSI6IkNGQzc5OTIwOTUxQTY2MkE5NUNBRDA4MTNGM0U1MDI1Iiwic3ViIjoiZGVmYXVsdC1zdWJqZWN0IiwiaXNzIjoiZGVmYXVsdC1pc3N1ZXIiLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJkZWZhdWx0LXVzZXJuYW1lIiwiaWF0IjoxNzU1NjQ2MTA3LCJleHAiOjE3NTU2NDk3MDd9.cNpNA9F0RV5B38bAM4IKH-lkyJ_O9zAnrkRxbfcJZgV4WqxKlTTKS5nasP2rC_Cm
+1 &gt; Host: 10.161.169.27:8517
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/21.0.8)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+19:28:30.972 response time in milliseconds: 2774
+1 &lt; 200
+1 &lt; content-length: 172
+1 &lt; Content-Type: application/json;charset=UTF-8
+{&quot;success&quot;:true,&quot;data&quot;:{&quot;data&quot;:[],&quot;total&quot;:0,&quot;page&quot;:1,&quot;limit&quot;:1000,&quot;hasNext&quot;:false,&quot;hasPrev&quot;:false,&quot;next&quot;:1,&quot;prev&quot;:1,&quot;pages&quot;:0,&quot;last&quot;:0,&quot;first&quot;:1},&quot;timestamp&quot;:1755646110939}
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.31">
+      <div class="step-ref passed">31</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -1090,14 +1110,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.31">
-      <div class="step-ref passed">31</div>
+    <div class="step-container" id="0.32">
+      <div class="step-ref passed">32</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>print &#39;Total de logs encontrados:&#39;, response.data.data.length</span>
+        <span>And</span>&nbsp;<span>match response.success == true</span>
       </div>
     </div>
-    <div class="time-cell passed">4</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -1106,7 +1126,42 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.31">13:19:10.902 [print] Total de logs encontrados: 0 
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.33">
+      <div class="step-ref failed">33</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match response.data.data[0].name == &#39;string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell failed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.33">19:28:30.980 classpath:api/obtenerRefCluster.feature:33
+And match response.data.data[0].name == &#39;string&#39;
+match failed: EQUALS
+  $ | actual path does not exist (STRING:STRING)
+  &#39;#notpresent&#39;
+  &#39;string&#39;
+
+classpath:api/obtenerRefCluster.feature:33
 </div>   
 
   
@@ -1119,14 +1174,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.32">
-      <div class="step-ref passed">32</div>
+    <div class="step-container" id="0.34">
+      <div class="step-ref skipped">34</div>
       
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>print &#39;=== TIEMPO DE RESPUESTA ===&#39;, responseTime / 1000, &#39;s&#39;</span>
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>match response.data.data[0].label == &#39;string&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1135,8 +1190,175 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.32">13:19:10.902 [print] === TIEMPO DE RESPUESTA === 0.175 s 
-</div>   
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.35">
+      <div class="step-ref skipped">35</div>
+      
+      <div class="step-cell skipped">
+        <span>*</span>&nbsp;<span>def responseText = karate.pretty(response)</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.36">
+      <div class="step-ref skipped">36</div>
+      
+      <div class="step-cell skipped">
+        <span>*</span>&nbsp;<span>def isValid = schemaUtil.isValid(schemaText, responseText)</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.37">
+      <div class="step-ref skipped">37</div>
+      
+      <div class="step-cell skipped">
+        <span>*</span>&nbsp;<span>match isValid == true</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.38">
+      <div class="step-ref skipped">38</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>print &#39;Consulta exitosa de Ref Clusters:&#39;, response</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.39">
+      <div class="step-ref skipped">39</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.40">
+      <div class="step-ref skipped">40</div>
+      
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>print &#39;=== TIEMPO DE RESPUESTA ===&#39;, responseTime / 1000, &#39;s&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
 
   
 

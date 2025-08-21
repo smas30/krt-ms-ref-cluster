@@ -4,7 +4,7 @@ function fn() {
     var loginUrl = 'http://10.161.169.27:8511/intraLogin';
 
     if (env === 'dev') {
-        baseUrl = 'http://10.161.169.27:8517/api/v1/estaciones/log-estaciones';
+        baseUrl = 'http://10.161.169.27:8517/api/v1/estaciones/ref-clusters';
     } else if (env === 'e2e') {
         baseUrl = 'http://examples.com';
     }
